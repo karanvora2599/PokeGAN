@@ -1,0 +1,3906 @@
+/opt/slurm/data/slurmd/job32906813/slurm_script: line 15: /scratch/kv2154/HPML-PokeGans-main/: Is a directory
+Not a conda environment: /scratch/env
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /home/kv2154/.local/lib/python3.8/site-packages (2.0.0)
+Requirement already satisfied: torchvision in /home/kv2154/.local/lib/python3.8/site-packages (0.15.1)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.4.0.1)
+Requirement already satisfied: sympy in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (1.11.1)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (2.14.3)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.7.91)
+Requirement already satisfied: typing-extensions in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (4.5.0)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.7.101)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.10.3.66)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (10.2.10.91)
+Requirement already satisfied: networkx in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (3.1)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.7.4.91)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (8.5.0.96)
+Requirement already satisfied: triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (2.0.0)
+Requirement already satisfied: filelock in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from torch) (3.0.12)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (10.9.0.58)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64" in /home/kv2154/.local/lib/python3.8/site-packages (from torch) (11.7.99)
+Requirement already satisfied: jinja2 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from torch) (2.11.2)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from torchvision) (7.2.0)
+Requirement already satisfied: requests in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from torchvision) (2.24.0)
+Requirement already satisfied: numpy in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from torchvision) (1.18.5)
+Requirement already satisfied: mpmath>=0.19 in /home/kv2154/.local/lib/python3.8/site-packages (from sympy->torch) (1.3.0)
+Requirement already satisfied: setuptools in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from nvidia-nvtx-cu11==11.7.91; platform_system == "Linux" and platform_machine == "x86_64"->torch) (49.2.0.post20200714)
+Requirement already satisfied: wheel in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from nvidia-nvtx-cu11==11.7.91; platform_system == "Linux" and platform_machine == "x86_64"->torch) (0.34.2)
+Requirement already satisfied: lit in /home/kv2154/.local/lib/python3.8/site-packages (from triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64"->torch) (16.0.2)
+Requirement already satisfied: cmake in /home/kv2154/.local/lib/python3.8/site-packages (from triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64"->torch) (3.26.3)
+Requirement already satisfied: MarkupSafe>=0.23 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from jinja2->torch) (1.1.1)
+Requirement already satisfied: certifi>=2017.4.17 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from requests->torchvision) (2020.6.20)
+Requirement already satisfied: chardet<4,>=3.0.2 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from requests->torchvision) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from requests->torchvision) (2.10)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /share/apps/anaconda3/2020.07/lib/python3.8/site-packages (from requests->torchvision) (1.25.9)
+Sat Apr 29 16:20:07 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 520.61.05    Driver Version: 520.61.05    CUDA Version: 11.8     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro RTX 8000     On   | 00000000:06:00.0 Off |                    0 |
+| N/A   55C    P8    17W / 250W |      0MiB / 46080MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Quadro RTX 8000     On   | 00000000:2F:00.0 Off |                    0 |
+| N/A   29C    P8    24W / 250W |      0MiB / 46080MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Quadro RTX 8000     On   | 00000000:86:00.0 Off |                    0 |
+| N/A   27C    P8    23W / 250W |      0MiB / 46080MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Quadro RTX 8000     On   | 00000000:D8:00.0 Off |                    0 |
+| N/A   27C    P8    13W / 250W |      0MiB / 46080MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              48
+On-line CPU(s) list: 0-47
+Thread(s) per core:  1
+Core(s) per socket:  24
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz
+Stepping:            7
+CPU MHz:             3900.000
+CPU max MHz:         3900.0000
+CPU min MHz:         1200.0000
+BogoMIPS:            5800.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0-23
+NUMA node1 CPU(s):   24-47
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities
+WARNING: you should run this program as super-user.
+gr045.hpc.nyu.edu
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 384GiB
+     *-cpu:0
+          product: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz
+          vendor: Intel Corp.
+          physical id: 1
+          bus info: cpu@0
+          version: 6.85.7
+          size: 3496MHz
+          capacity: 3900MHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities cpufreq
+          configuration: microcode=83899138
+     *-cpu:1
+          product: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz
+          vendor: Intel Corp.
+          physical id: 2
+          bus info: cpu@1
+          version: 6.85.7
+          size: 3505MHz
+          capacity: 3900MHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities cpufreq
+          configuration: microcode=83899138
+     *-pci:0
+          description: Host bridge
+          product: Sky Lake-E DMI3 Registers
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+        *-generic:0
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:214 memory:20ffff2c000-20ffff2ffff
+        *-generic:1
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.1
+             bus info: pci@0000:00:04.1
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:216 memory:20ffff28000-20ffff2bfff
+        *-generic:2
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.2
+             bus info: pci@0000:00:04.2
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:214 memory:20ffff24000-20ffff27fff
+        *-generic:3
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.3
+             bus info: pci@0000:00:04.3
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:216 memory:20ffff20000-20ffff23fff
+        *-generic:4
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.4
+             bus info: pci@0000:00:04.4
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:214 memory:20ffff1c000-20ffff1ffff
+        *-generic:5
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.5
+             bus info: pci@0000:00:04.5
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:216 memory:20ffff18000-20ffff1bfff
+        *-generic:6
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.6
+             bus info: pci@0000:00:04.6
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:214 memory:20ffff14000-20ffff17fff
+        *-generic:7
+             description: System peripheral
+             product: Sky Lake-E CBDMA Registers
+             vendor: Intel Corporation
+             physical id: 4.7
+             bus info: pci@0000:00:04.7
+             version: 07
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=ioatdma latency=0
+             resources: iomemory:20f0-20ef irq:216 memory:20ffff10000-20ffff13fff
+        *-generic:8 UNCLAIMED
+             description: System peripheral
+             product: Sky Lake-E MM/Vt-d Configuration Registers
+             vendor: Intel Corporation
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: cap_list
+             configuration: latency=0
+        *-generic:9 UNCLAIMED
+             description: System peripheral
+             product: Sky Lake-E RAS
+             vendor: Intel Corporation
+             physical id: 5.2
+             bus info: pci@0000:00:05.2
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: cap_list
+             configuration: latency=0
+        *-generic:10 UNCLAIMED
+             description: PIC
+             product: Sky Lake-E IOAPIC
+             vendor: Intel Corporation
+             physical id: 5.4
+             bus info: pci@0000:00:05.4
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: io_x_-apic bus_master cap_list
+             configuration: latency=0
+             resources: memory:d4c87000-d4c87fff
+        *-generic:11 UNCLAIMED
+             description: System peripheral
+             product: Sky Lake-E Ubox Registers
+             vendor: Intel Corporation
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: cap_list
+             configuration: latency=0
+        *-generic:12 UNCLAIMED
+             description: Performance counters
+             product: Sky Lake-E Ubox Registers
+             vendor: Intel Corporation
+             physical id: 8.1
+             bus info: pci@0000:00:08.1
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             configuration: latency=0
+        *-generic:13 UNCLAIMED
+             description: System peripheral
+             product: Sky Lake-E Ubox Registers
+             vendor: Intel Corporation
+             physical id: 8.2
+             bus info: pci@0000:00:08.2
+             version: 07
+             width: 32 bits
+             clock: 33MHz
+             capabilities: cap_list
+             configuration: latency=0
+        *-generic:14 UNCLAIMED
+             description: Unassigned class
+             product: C620 Series Chipset Family MROM 0
+             vendor: Intel Corporation
+             physical id: 11
+             bus info: pci@0000:00:11.0
+             version: 09
+             width: 32 bits
+             clock: 33MHz
+             capabilities: cap_list
+             configuration: latency=0
+        *-usb
+             description: USB controller
+             product: C620 Series Chipset Family USB 3.0 xHCI Controller
+             vendor: Intel Corporation
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             capabilities: xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: iomemory:20f0-20ef irq:37 memory:20ffff00000-20ffff0ffff
+        *-generic:15 UNCLAIMED
+             description: Signal processing controller
+             product: C620 Series Chipset Family Thermal Subsystem
+             vendor: Intel Corporation
+             physical id: 14.2
+             bus info: pci@0000:00:14.2
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             capabilities: cap_list
+             configuration: latency=0
+             resources: iomemory:20f0-20ef memory:20ffff33000-20ffff33fff
+        *-communication:0 UNCLAIMED
+             description: Communication controller
+             product: C620 Series Chipset Family MEI Controller #1
+             vendor: Intel Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: latency=0
+             resources: iomemory:20f0-20ef memory:20ffff32000-20ffff32fff
+        *-communication:1 UNCLAIMED
+             description: Communication controller
+             product: C620 Series Chipset Family MEI Controller #2
+             vendor: Intel Corporation
+             physical id: 16.1
+             bus info: pci@0000:00:16.1
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: latency=0
+             resources: iomemory:20f0-20ef memory:20ffff31000-20ffff31fff
+        *-communication:2 UNCLAIMED
+             description: Communication controller
+             product: C620 Series Chipset Family MEI Controller #3
+             vendor: Intel Corporation
+             physical id: 16.4
+             bus info: pci@0000:00:16.4
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: latency=0
+             resources: iomemory:20f0-20ef memory:20ffff30000-20ffff30fff
+        *-sata
+             description: SATA controller
+             product: C620 Series Chipset Family SATA Controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: 17
+             bus info: pci@0000:00:17.0
+             version: 09
+             width: 32 bits
+             clock: 66MHz
+             capabilities: sata ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0
+             resources: irq:38 memory:d4c84000-d4c85fff memory:d4c86000-d4c860ff ioport:2030(size=8) ioport:2020(size=4) ioport:2000(size=32) memory:d4c00000-d4c7ffff
+        *-pci
+             description: PCI bridge
+             product: C620 Series Chipset Family PCI Express Root Port #1
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: f9
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:24 memory:d3000000-d4bfffff
+           *-pci
+                description: PCI bridge
+                product: x1 PCIe Gen2 Bridge[Pilot4]
+                vendor: Emulex Corporation
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                version: 00
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pci normal_decode bus_master cap_list
+                resources: memory:d4b00000-d4b00fff memory:d3000000-d4afffff
+              *-display
+                   description: VGA compatible controller
+                   product: MGA G200e [Pilot] ServerEngines (SEP1)
+                   vendor: Matrox Electronics Systems Ltd.
+                   physical id: 0
+                   bus info: pci@0000:02:00.0
+                   logical name: /dev/fb0
+                   version: 42
+                   width: 32 bits
+                   clock: 33MHz
+                   capabilities: vga_controller bus_master cap_list rom fb
+                   configuration: depth=32 driver=mgag200 latency=0 resolution=1024,768
+                   resources: irq:16 memory:d3000000-d3ffffff memory:d4a10000-d4a13fff memory:d4000000-d47fffff memory:d4a00000-d4a0ffff
+        *-isa
+             description: ISA bridge
+             product: C621 Series Chipset LPC/eSPI Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 09
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0b00
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=rtc_cmos
+           *-pnp00:01
+                product: PnP device PNP0c02
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:02
+                product: PnP device PNP0c02
+                physical id: 2
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:03
+                product: PnP device PNP0501
+                physical id: 3
+                capabilities: pnp
+                configuration: driver=serial
+           *-pnp00:04
+                product: PnP device PNP0501
+                physical id: 4
+                capabilities: pnp
+                configuration: driver=serial
+           *-pnp00:05
+                product: PnP device IPI0001
+                vendor: Intelligent Platform Management Interface (IPMI) forum (Intel, HP, NEC, Dell)
+                physical id: 5
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:06
+                product: PnP device PNP0c02
+                physical id: 6
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:07
+                product: PnP device PNP0c02
+                physical id: 7
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:08
+                product: PnP device PNP0c02
+                physical id: 8
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:09
+                product: PnP device PNP0c02
+                physical id: 9
+                capabilities: pnp
+                configuration: driver=system
+        *-memory UNCLAIMED
+             description: Memory controller
+             product: C620 Series Chipset Family Power Management Controller
+             vendor: Intel Corporation
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             version: 09
+             width: 32 bits
+             clock: 33MHz (30.3ns)
+             configuration: latency=0
+             resources: memory:d4c80000-d4c83fff
+        *-serial:0
+             description: SMBus
+             product: C620 Series Chipset Family SMBus
+             vendor: Intel Corporation
+             physical id: 1f.4
+             bus info: pci@0000:00:1f.4
+             version: 09
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: iomemory:2000-1fff irq:16 memory:20000000000-200000000ff ioport:780(size=32)
+        *-serial:1 UNCLAIMED
+             description: Serial bus controller
+             product: C620 Series Chipset Family SPI Controller
+             vendor: Intel Corporation
+             physical id: 1f.5
+             bus info: pci@0000:00:1f.5
+             version: 09
+             width: 32 bits
+             clock: 33MHz
+             configuration: latency=0
+             resources: memory:fe010000-fe010fff
+     *-pci:1
+          description: PCI bridge
+          product: Sky Lake-E PCI Express Root Port A
+          vendor: Intel Corporation
+          physical id: 101
+          bus info: pci@0000:05:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:26 memory:d8000000-d95fffff ioport:21000000000(size=41641050112)
+        *-display
+             description: 3D controller
+             product: TU102GL [Quadro RTX 6000/8000]
+             vendor: NVIDIA Corporation
+             physical id: 0
+             bus info: pci@0000:06:00.0
+             version: a1
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=nvidia latency=0
+             resources: iomemory:2100-20ff iomemory:2190-218f irq:234 memory:d8000000-d8ffffff memory:21000000000-217ffffffff memory:219b0000000-219b1ffffff memory:d9000000-d95fffff memory:21800000000-2197fffffff memory:21980000000-219afffffff
+     *-generic:0 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E VT-d
+          vendor: Intel Corporation
+          physical id: 3
+          bus info: pci@0000:05:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:1 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS Configuration Registers
+          vendor: Intel Corporation
+          physical id: 6
+          bus info: pci@0000:05:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:2 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOxAPIC Configuration Registers
+          vendor: Intel Corporation
+          physical id: 7
+          bus info: pci@0000:05:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:d9600000-d9600fff
+     *-generic:3 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9
+          bus info: pci@0000:05:08.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:4 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a
+          bus info: pci@0000:05:08.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:5 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b
+          bus info: pci@0000:05:08.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:6 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: c
+          bus info: pci@0000:05:08.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:7 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: d
+          bus info: pci@0000:05:08.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:8 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: e
+          bus info: pci@0000:05:08.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:9 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: f
+          bus info: pci@0000:05:08.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:10 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 10
+          bus info: pci@0000:05:08.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:11 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 11
+          bus info: pci@0000:05:09.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:12 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 12
+          bus info: pci@0000:05:09.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:13 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 13
+          bus info: pci@0000:05:09.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:14 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 14
+          bus info: pci@0000:05:09.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:15 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 15
+          bus info: pci@0000:05:09.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:16 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 16
+          bus info: pci@0000:05:09.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:17 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 17
+          bus info: pci@0000:05:09.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:18 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 18
+          bus info: pci@0000:05:09.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:19 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 19
+          bus info: pci@0000:05:0a.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:20 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 1a
+          bus info: pci@0000:05:0a.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:21 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 1b
+          bus info: pci@0000:05:0a.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:22 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 1c
+          bus info: pci@0000:05:0a.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:23 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 1d
+          bus info: pci@0000:05:0a.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:24 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 1e
+          bus info: pci@0000:05:0a.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:25 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 1f
+          bus info: pci@0000:05:0a.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:26 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 20
+          bus info: pci@0000:05:0a.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:27 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 21
+          bus info: pci@0000:05:0b.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:28 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 22
+          bus info: pci@0000:05:0b.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:29 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 23
+          bus info: pci@0000:05:0b.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:30 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 24
+          bus info: pci@0000:05:0b.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:31 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 25
+          bus info: pci@0000:05:0e.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:32 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 26
+          bus info: pci@0000:05:0e.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:33 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 27
+          bus info: pci@0000:05:0e.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:34 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 28
+          bus info: pci@0000:05:0e.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:35 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 29
+          bus info: pci@0000:05:0e.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:36 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 2a
+          bus info: pci@0000:05:0e.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:37 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 2b
+          bus info: pci@0000:05:0e.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:38 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 2c
+          bus info: pci@0000:05:0e.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:39 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 2d
+          bus info: pci@0000:05:0f.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:40 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 2e
+          bus info: pci@0000:05:0f.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:41 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 2f
+          bus info: pci@0000:05:0f.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:42 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 30
+          bus info: pci@0000:05:0f.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:43 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 31
+          bus info: pci@0000:05:0f.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:44 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 32
+          bus info: pci@0000:05:0f.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:45 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 33
+          bus info: pci@0000:05:0f.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:46 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 34
+          bus info: pci@0000:05:0f.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:47 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 35
+          bus info: pci@0000:05:10.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:48 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 36
+          bus info: pci@0000:05:10.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:49 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 37
+          bus info: pci@0000:05:10.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:50 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 38
+          bus info: pci@0000:05:10.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:51 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 39
+          bus info: pci@0000:05:10.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:52 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 3a
+          bus info: pci@0000:05:10.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:53 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 3b
+          bus info: pci@0000:05:10.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:54 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 3c
+          bus info: pci@0000:05:10.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:55 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 3d
+          bus info: pci@0000:05:11.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:56 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 3e
+          bus info: pci@0000:05:11.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:57 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 3f
+          bus info: pci@0000:05:11.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:58 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 40
+          bus info: pci@0000:05:11.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:59 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 41
+          bus info: pci@0000:05:1d.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:60 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 42
+          bus info: pci@0000:05:1d.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:61 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 43
+          bus info: pci@0000:05:1d.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:62 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 44
+          bus info: pci@0000:05:1d.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:63 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 45
+          bus info: pci@0000:05:1e.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:64 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 46
+          bus info: pci@0000:05:1e.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:65 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 47
+          bus info: pci@0000:05:1e.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:66 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 48
+          bus info: pci@0000:05:1e.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:67 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 49
+          bus info: pci@0000:05:1e.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:68 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 4a
+          bus info: pci@0000:05:1e.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:69 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: 4b
+          bus info: pci@0000:05:1e.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-pci:2
+          description: PCI bridge
+          product: Sky Lake-E PCI Express Root Port A
+          vendor: Intel Corporation
+          physical id: 102
+          bus info: pci@0000:2e:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:28 memory:dd000000-de5fffff ioport:22000000000(size=41641050112)
+        *-display
+             description: 3D controller
+             product: TU102GL [Quadro RTX 6000/8000]
+             vendor: NVIDIA Corporation
+             physical id: 0
+             bus info: pci@0000:2f:00.0
+             version: a1
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=nvidia latency=0
+             resources: iomemory:2200-21ff iomemory:2290-228f irq:235 memory:dd000000-ddffffff memory:22000000000-227ffffffff memory:229b0000000-229b1ffffff memory:de000000-de5fffff memory:22800000000-2297fffffff memory:22980000000-229afffffff
+     *-generic:70 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E VT-d
+          vendor: Intel Corporation
+          physical id: 4c
+          bus info: pci@0000:2e:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:71 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS Configuration Registers
+          vendor: Intel Corporation
+          physical id: 4d
+          bus info: pci@0000:2e:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:72 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOxAPIC Configuration Registers
+          vendor: Intel Corporation
+          physical id: 4e
+          bus info: pci@0000:2e:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:de600000-de600fff
+     *-generic:73
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 4f
+          bus info: pci@0000:2e:08.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:74
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 50
+          bus info: pci@0000:2e:09.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:75 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 51
+          bus info: pci@0000:2e:0a.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:76 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 52
+          bus info: pci@0000:2e:0a.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:77
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 53
+          bus info: pci@0000:2e:0a.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:78 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 54
+          bus info: pci@0000:2e:0a.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:79 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 55
+          bus info: pci@0000:2e:0a.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:80 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 1
+          vendor: Intel Corporation
+          physical id: 56
+          bus info: pci@0000:2e:0a.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:81
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 1
+          vendor: Intel Corporation
+          physical id: 57
+          bus info: pci@0000:2e:0a.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:82 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 1
+          vendor: Intel Corporation
+          physical id: 58
+          bus info: pci@0000:2e:0a.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:83 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E DECS Channel 2
+          vendor: Intel Corporation
+          physical id: 59
+          bus info: pci@0000:2e:0b.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:84 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 2
+          vendor: Intel Corporation
+          physical id: 5a
+          bus info: pci@0000:2e:0b.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:85
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 2
+          vendor: Intel Corporation
+          physical id: 5b
+          bus info: pci@0000:2e:0b.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:86 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 2
+          vendor: Intel Corporation
+          physical id: 5c
+          bus info: pci@0000:2e:0b.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:87 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 5d
+          bus info: pci@0000:2e:0c.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:88 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 5e
+          bus info: pci@0000:2e:0c.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:89
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 5f
+          bus info: pci@0000:2e:0c.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:90 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 60
+          bus info: pci@0000:2e:0c.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:91 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 61
+          bus info: pci@0000:2e:0c.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:92 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 1
+          vendor: Intel Corporation
+          physical id: 62
+          bus info: pci@0000:2e:0c.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:93
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 1
+          vendor: Intel Corporation
+          physical id: 63
+          bus info: pci@0000:2e:0c.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:94 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 1
+          vendor: Intel Corporation
+          physical id: 64
+          bus info: pci@0000:2e:0c.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:95 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E DECS Channel 2
+          vendor: Intel Corporation
+          physical id: 65
+          bus info: pci@0000:2e:0d.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:96 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 2
+          vendor: Intel Corporation
+          physical id: 66
+          bus info: pci@0000:2e:0d.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:97
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 2
+          vendor: Intel Corporation
+          physical id: 67
+          bus info: pci@0000:2e:0d.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:98 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 2
+          vendor: Intel Corporation
+          physical id: 68
+          bus info: pci@0000:2e:0d.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-pci:3
+          description: PCI bridge
+          product: Sky Lake-E PCI Express Root Port A
+          vendor: Intel Corporation
+          physical id: 103
+          bus info: pci@0000:57:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:30 memory:e3e00000-e3efffff ioport:23ffd000000(size=45088768)
+        *-network:0
+             description: Ethernet interface
+             product: Ethernet Controller XXV710 for 25GbE SFP28
+             vendor: Intel Corporation
+             physical id: 0
+             bus info: pci@0000:58:00.0
+             logical name: ens1f0
+             version: 02
+             serial: 3c:fd:fe:ee:57:64
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list rom ethernet physical fibre autonegotiation
+             configuration: autonegotiation=off broadcast=yes driver=i40e driverversion=4.18.0-372.26.1.el8_6.x86_64 duplex=full firmware=7.00 0x80005189 1.2203.0 ip=10.32.35.104 latency=0 link=yes multicast=yes
+             resources: iomemory:23f0-23ef iomemory:23f0-23ef irq:40 memory:23ffe000000-23ffeffffff memory:23fff808000-23fff80ffff memory:e3e80000-e3efffff memory:23fff400000-23fff7fffff memory:23fff910000-23fffa0ffff
+        *-network:1
+             description: Ethernet interface
+             product: Ethernet Controller XXV710 for 25GbE SFP28
+             vendor: Intel Corporation
+             physical id: 0.1
+             bus info: pci@0000:58:00.1
+             logical name: ens1f1
+             version: 02
+             serial: 3c:fd:fe:ee:57:65
+             capacity: 10Gbit/s
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list rom ethernet physical 10000bt-fd autonegotiation
+             configuration: autonegotiation=off broadcast=yes driver=i40e driverversion=4.18.0-372.26.1.el8_6.x86_64 firmware=7.00 0x80005189 1.2203.0 latency=0 link=no multicast=yes
+             resources: iomemory:23f0-23ef iomemory:23f0-23ef irq:40 memory:23ffd000000-23ffdffffff memory:23fff800000-23fff807fff memory:e3e00000-e3e7ffff memory:23fff000000-23fff3fffff memory:23fff810000-23fff90ffff
+     *-generic:99 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E VT-d
+          vendor: Intel Corporation
+          physical id: 69
+          bus info: pci@0000:57:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:100 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS Configuration Registers
+          vendor: Intel Corporation
+          physical id: 6a
+          bus info: pci@0000:57:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:101 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOxAPIC Configuration Registers
+          vendor: Intel Corporation
+          physical id: 6b
+          bus info: pci@0000:57:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:e3f00000-e3f00fff
+     *-generic:102
+          description: Performance counters
+          product: Sky Lake-E KTI 0
+          vendor: Intel Corporation
+          physical id: 6c
+          bus info: pci@0000:57:0e.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:103 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E UPI Registers
+          vendor: Intel Corporation
+          physical id: 6d
+          bus info: pci@0000:57:0e.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:104
+          description: Performance counters
+          product: Sky Lake-E KTI 0
+          vendor: Intel Corporation
+          physical id: 6e
+          bus info: pci@0000:57:0f.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:105 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E UPI Registers
+          vendor: Intel Corporation
+          physical id: 6f
+          bus info: pci@0000:57:0f.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:106
+          description: Performance counters
+          product: Sky Lake-E KTI 0
+          vendor: Intel Corporation
+          physical id: 70
+          bus info: pci@0000:57:10.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:107 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E UPI Registers
+          vendor: Intel Corporation
+          physical id: 71
+          bus info: pci@0000:57:10.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:108 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: 72
+          bus info: pci@0000:57:12.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:109
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: 73
+          bus info: pci@0000:57:12.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:110
+          description: System peripheral
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: 74
+          bus info: pci@0000:57:12.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:111 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: 75
+          bus info: pci@0000:57:12.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:112
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: 76
+          bus info: pci@0000:57:12.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:113 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: 77
+          bus info: pci@0000:57:15.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:114
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: 78
+          bus info: pci@0000:57:15.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:115 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: 79
+          bus info: pci@0000:57:16.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:116
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: 7a
+          bus info: pci@0000:57:16.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:117 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: 7b
+          bus info: pci@0000:57:16.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:118 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: 7c
+          bus info: pci@0000:57:16.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:119 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: 7d
+          bus info: pci@0000:57:17.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:120
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: 7e
+          bus info: pci@0000:57:17.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:121
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4
+          bus info: pci@0000:80:04.0
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:224 memory:24ffff1c000-24ffff1ffff
+     *-generic:122
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.1
+          bus info: pci@0000:80:04.1
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:226 memory:24ffff18000-24ffff1bfff
+     *-generic:123
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.2
+          bus info: pci@0000:80:04.2
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:224 memory:24ffff14000-24ffff17fff
+     *-generic:124
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.3
+          bus info: pci@0000:80:04.3
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:226 memory:24ffff10000-24ffff13fff
+     *-generic:125
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.4
+          bus info: pci@0000:80:04.4
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:224 memory:24ffff0c000-24ffff0ffff
+     *-generic:126
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.5
+          bus info: pci@0000:80:04.5
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:226 memory:24ffff08000-24ffff0bfff
+     *-generic:127
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.6
+          bus info: pci@0000:80:04.6
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:224 memory:24ffff04000-24ffff07fff
+     *-generic:128
+          description: System peripheral
+          product: Sky Lake-E CBDMA Registers
+          vendor: Intel Corporation
+          physical id: 4.7
+          bus info: pci@0000:80:04.7
+          version: 07
+          width: 64 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=ioatdma latency=0
+          resources: iomemory:24f0-24ef irq:226 memory:24ffff00000-24ffff03fff
+     *-generic:129 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E MM/Vt-d Configuration Registers
+          vendor: Intel Corporation
+          physical id: 7f
+          bus info: pci@0000:80:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:130 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS
+          vendor: Intel Corporation
+          physical id: 80
+          bus info: pci@0000:80:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:131 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOAPIC
+          vendor: Intel Corporation
+          physical id: 81
+          bus info: pci@0000:80:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:e8f00000-e8f00fff
+     *-generic:132 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Ubox Registers
+          vendor: Intel Corporation
+          physical id: 82
+          bus info: pci@0000:80:08.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:133 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E Ubox Registers
+          vendor: Intel Corporation
+          physical id: 83
+          bus info: pci@0000:80:08.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:134 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Ubox Registers
+          vendor: Intel Corporation
+          physical id: 84
+          bus info: pci@0000:80:08.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-pci:4
+          description: PCI bridge
+          product: Sky Lake-E PCI Express Root Port A
+          vendor: Intel Corporation
+          physical id: 104
+          bus info: pci@0000:85:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:32 memory:ec000000-ed5fffff ioport:25000000000(size=41641050112)
+        *-display
+             description: 3D controller
+             product: TU102GL [Quadro RTX 6000/8000]
+             vendor: NVIDIA Corporation
+             physical id: 0
+             bus info: pci@0000:86:00.0
+             version: a1
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=nvidia latency=0
+             resources: iomemory:2500-24ff iomemory:2590-258f irq:236 memory:ec000000-ecffffff memory:25000000000-257ffffffff memory:259b0000000-259b1ffffff memory:ed000000-ed5fffff memory:25800000000-2597fffffff memory:25980000000-259afffffff
+     *-generic:135 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E VT-d
+          vendor: Intel Corporation
+          physical id: 85
+          bus info: pci@0000:85:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:136 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS Configuration Registers
+          vendor: Intel Corporation
+          physical id: 86
+          bus info: pci@0000:85:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:137 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOxAPIC Configuration Registers
+          vendor: Intel Corporation
+          physical id: 87
+          bus info: pci@0000:85:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:ed600000-ed600fff
+     *-generic:138 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 88
+          bus info: pci@0000:85:08.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:139 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8.1
+          bus info: pci@0000:85:08.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:140 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8.2
+          bus info: pci@0000:85:08.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:141 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 89
+          bus info: pci@0000:85:08.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:142 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8a
+          bus info: pci@0000:85:08.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:143 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8b
+          bus info: pci@0000:85:08.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:144 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8c
+          bus info: pci@0000:85:08.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:145 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8d
+          bus info: pci@0000:85:08.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:146 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8e
+          bus info: pci@0000:85:09.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:147 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 8f
+          bus info: pci@0000:85:09.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:148 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 90
+          bus info: pci@0000:85:09.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:149 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 91
+          bus info: pci@0000:85:09.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:150 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 92
+          bus info: pci@0000:85:09.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:151 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 93
+          bus info: pci@0000:85:09.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:152 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 94
+          bus info: pci@0000:85:09.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:153 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 95
+          bus info: pci@0000:85:09.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:154 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 96
+          bus info: pci@0000:85:0a.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:155 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 97
+          bus info: pci@0000:85:0a.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:156 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 98
+          bus info: pci@0000:85:0a.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:157 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 99
+          bus info: pci@0000:85:0a.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:158 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9a
+          bus info: pci@0000:85:0a.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:159 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9b
+          bus info: pci@0000:85:0a.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:160 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9c
+          bus info: pci@0000:85:0a.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:161 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9d
+          bus info: pci@0000:85:0a.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:162 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9e
+          bus info: pci@0000:85:0b.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:163 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: 9f
+          bus info: pci@0000:85:0b.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:164 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a0
+          bus info: pci@0000:85:0b.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:165 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a1
+          bus info: pci@0000:85:0b.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:166 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a2
+          bus info: pci@0000:85:0e.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:167 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a3
+          bus info: pci@0000:85:0e.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:168 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a4
+          bus info: pci@0000:85:0e.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:169 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a5
+          bus info: pci@0000:85:0e.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:170 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a6
+          bus info: pci@0000:85:0e.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:171 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a7
+          bus info: pci@0000:85:0e.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:172 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a8
+          bus info: pci@0000:85:0e.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:173 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: a9
+          bus info: pci@0000:85:0e.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:174 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: aa
+          bus info: pci@0000:85:0f.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:175 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: ab
+          bus info: pci@0000:85:0f.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:176 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: ac
+          bus info: pci@0000:85:0f.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:177 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: ad
+          bus info: pci@0000:85:0f.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:178 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: ae
+          bus info: pci@0000:85:0f.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:179 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: af
+          bus info: pci@0000:85:0f.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:180 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b0
+          bus info: pci@0000:85:0f.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:181 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b1
+          bus info: pci@0000:85:0f.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:182 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b2
+          bus info: pci@0000:85:10.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:183 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b3
+          bus info: pci@0000:85:10.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:184 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b4
+          bus info: pci@0000:85:10.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:185 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b5
+          bus info: pci@0000:85:10.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:186 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b6
+          bus info: pci@0000:85:10.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:187 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b7
+          bus info: pci@0000:85:10.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:188 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b8
+          bus info: pci@0000:85:10.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:189 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: b9
+          bus info: pci@0000:85:10.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:190 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: ba
+          bus info: pci@0000:85:11.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:191 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: bb
+          bus info: pci@0000:85:11.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:192 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: bc
+          bus info: pci@0000:85:11.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:193 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: bd
+          bus info: pci@0000:85:11.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:194 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: be
+          bus info: pci@0000:85:1d.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:195 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: bf
+          bus info: pci@0000:85:1d.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:196 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: c0
+          bus info: pci@0000:85:1d.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:197 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E CHA Registers
+          vendor: Intel Corporation
+          physical id: c1
+          bus info: pci@0000:85:1d.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:198 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c2
+          bus info: pci@0000:85:1e.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:199 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c3
+          bus info: pci@0000:85:1e.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:200 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c4
+          bus info: pci@0000:85:1e.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:201 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c5
+          bus info: pci@0000:85:1e.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:202 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c6
+          bus info: pci@0000:85:1e.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:203 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c7
+          bus info: pci@0000:85:1e.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:204 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E PCU Registers
+          vendor: Intel Corporation
+          physical id: c8
+          bus info: pci@0000:85:1e.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-pci:5
+          description: PCI bridge
+          product: Sky Lake-E PCI Express Root Port A
+          vendor: Intel Corporation
+          physical id: 105
+          bus info: pci@0000:ae:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:34 memory:f2e00000-f2efffff ioport:26ffe000000(size=33554432)
+        *-network
+             description: interface
+             product: MT28908 Family [ConnectX-6]
+             vendor: Mellanox Technologies
+             physical id: 0
+             bus info: pci@0000:af:00.0
+             logical name: ib0
+             version: 00
+             serial: 00:00:10:29:fe:80:00:00:00:00:00:00:1c:34:00:00:00:00:00:00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list rom physical
+             configuration: autonegotiation=off broadcast=yes driver=mlx5_core[ib_ipoib] driverversion=5.8-1.0.1 duplex=full firmware=20.35.1012 (LNV0000000016) ip=10.0.3.104 latency=0 link=yes multicast=yes
+             resources: iomemory:26f0-26ef irq:39 memory:26ffe000000-26fffffffff memory:f2e00000-f2efffff
+     *-generic:205 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E VT-d
+          vendor: Intel Corporation
+          physical id: c9
+          bus info: pci@0000:ae:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:206 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS Configuration Registers
+          vendor: Intel Corporation
+          physical id: ca
+          bus info: pci@0000:ae:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:207 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOxAPIC Configuration Registers
+          vendor: Intel Corporation
+          physical id: cb
+          bus info: pci@0000:ae:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:f2f00000-f2f00fff
+     *-generic:208
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: 8
+          bus info: pci@0000:ae:08.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:209
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: cc
+          bus info: pci@0000:ae:09.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:210 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: cd
+          bus info: pci@0000:ae:0a.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:211 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: ce
+          bus info: pci@0000:ae:0a.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:212
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: cf
+          bus info: pci@0000:ae:0a.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:213 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: d0
+          bus info: pci@0000:ae:0a.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:214 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: d1
+          bus info: pci@0000:ae:0a.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:215 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 1
+          vendor: Intel Corporation
+          physical id: d2
+          bus info: pci@0000:ae:0a.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:216
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 1
+          vendor: Intel Corporation
+          physical id: d3
+          bus info: pci@0000:ae:0a.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:217 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 1
+          vendor: Intel Corporation
+          physical id: d4
+          bus info: pci@0000:ae:0a.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:218 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E DECS Channel 2
+          vendor: Intel Corporation
+          physical id: d5
+          bus info: pci@0000:ae:0b.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:219 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 2
+          vendor: Intel Corporation
+          physical id: d6
+          bus info: pci@0000:ae:0b.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:220
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 2
+          vendor: Intel Corporation
+          physical id: d7
+          bus info: pci@0000:ae:0b.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:221 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 2
+          vendor: Intel Corporation
+          physical id: d8
+          bus info: pci@0000:ae:0b.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:222 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: d9
+          bus info: pci@0000:ae:0c.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:223 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: da
+          bus info: pci@0000:ae:0c.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:224
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: db
+          bus info: pci@0000:ae:0c.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:225 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: dc
+          bus info: pci@0000:ae:0c.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:226 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E Integrated Memory Controller
+          vendor: Intel Corporation
+          physical id: dd
+          bus info: pci@0000:ae:0c.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:227 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 1
+          vendor: Intel Corporation
+          physical id: de
+          bus info: pci@0000:ae:0c.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:228
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 1
+          vendor: Intel Corporation
+          physical id: df
+          bus info: pci@0000:ae:0c.6
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:229 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 1
+          vendor: Intel Corporation
+          physical id: e0
+          bus info: pci@0000:ae:0c.7
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:230 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E DECS Channel 2
+          vendor: Intel Corporation
+          physical id: e1
+          bus info: pci@0000:ae:0d.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:231 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LM Channel 2
+          vendor: Intel Corporation
+          physical id: e2
+          bus info: pci@0000:ae:0d.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:232
+          description: System peripheral
+          product: Sky Lake-E LMS Channel 2
+          vendor: Intel Corporation
+          physical id: e3
+          bus info: pci@0000:ae:0d.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:233 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E LMDP Channel 2
+          vendor: Intel Corporation
+          physical id: e4
+          bus info: pci@0000:ae:0d.3
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-pci:6
+          description: PCI bridge
+          product: Sky Lake-E PCI Express Root Port A
+          vendor: Intel Corporation
+          physical id: 106
+          bus info: pci@0000:d7:00.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:36 memory:f6000000-f75fffff ioport:27000000000(size=41641050112)
+        *-display
+             description: 3D controller
+             product: TU102GL [Quadro RTX 6000/8000]
+             vendor: NVIDIA Corporation
+             physical id: 0
+             bus info: pci@0000:d8:00.0
+             version: a1
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=nvidia latency=0
+             resources: iomemory:2700-26ff iomemory:2790-278f irq:237 memory:f6000000-f6ffffff memory:27000000000-277ffffffff memory:279b0000000-279b1ffffff memory:f7000000-f75fffff memory:27800000000-2797fffffff memory:27980000000-279afffffff
+     *-generic:234 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E VT-d
+          vendor: Intel Corporation
+          physical id: 5
+          bus info: pci@0000:d7:05.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:235 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E RAS Configuration Registers
+          vendor: Intel Corporation
+          physical id: 5.2
+          bus info: pci@0000:d7:05.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:236 UNCLAIMED
+          description: PIC
+          product: Sky Lake-E IOxAPIC Configuration Registers
+          vendor: Intel Corporation
+          physical id: 5.4
+          bus info: pci@0000:d7:05.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: io_x_-apic bus_master cap_list
+          configuration: latency=0
+          resources: memory:f7600000-f7600fff
+     *-generic:237
+          description: Performance counters
+          product: Sky Lake-E KTI 0
+          vendor: Intel Corporation
+          physical id: e5
+          bus info: pci@0000:d7:0e.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:238 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E UPI Registers
+          vendor: Intel Corporation
+          physical id: e6
+          bus info: pci@0000:d7:0e.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:239
+          description: Performance counters
+          product: Sky Lake-E KTI 0
+          vendor: Intel Corporation
+          physical id: e7
+          bus info: pci@0000:d7:0f.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:240 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E UPI Registers
+          vendor: Intel Corporation
+          physical id: e8
+          bus info: pci@0000:d7:0f.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:241
+          description: Performance counters
+          product: Sky Lake-E KTI 0
+          vendor: Intel Corporation
+          physical id: e9
+          bus info: pci@0000:d7:10.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:242 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E UPI Registers
+          vendor: Intel Corporation
+          physical id: ea
+          bus info: pci@0000:d7:10.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:243 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: eb
+          bus info: pci@0000:d7:12.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:244
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: ec
+          bus info: pci@0000:d7:12.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:245
+          description: System peripheral
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: ed
+          bus info: pci@0000:d7:12.2
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:246 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: ee
+          bus info: pci@0000:d7:12.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          capabilities: cap_list
+          configuration: latency=0
+     *-generic:247
+          description: Performance counters
+          product: Sky Lake-E M3KTI Registers
+          vendor: Intel Corporation
+          physical id: ef
+          bus info: pci@0000:d7:12.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:248 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: f0
+          bus info: pci@0000:d7:15.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:249
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: f1
+          bus info: pci@0000:d7:15.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:250 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: f2
+          bus info: pci@0000:d7:16.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:251
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: f3
+          bus info: pci@0000:d7:16.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+     *-generic:252 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: f4
+          bus info: pci@0000:d7:16.4
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:253 UNCLAIMED
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: f5
+          bus info: pci@0000:d7:16.5
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:254 UNCLAIMED
+          description: System peripheral
+          product: Sky Lake-E M2PCI Registers
+          vendor: Intel Corporation
+          physical id: f6
+          bus info: pci@0000:d7:17.0
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: latency=0
+     *-generic:255
+          description: Performance counters
+          product: Sky Lake-E DDRIO Registers
+          vendor: Intel Corporation
+          physical id: f7
+          bus info: pci@0000:d7:17.1
+          version: 07
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skx_uncore latency=0
+          resources: irq:0
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: PC Speaker
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: isa
+WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+4
+Device and Rank:  cuda 0
+Device and Rank:  cuda 1
+Device and Rank:  cuda 2
+Device and Rank:  cuda 3
+Epoch: 1 	Discriminator Loss: 0.006014 	Generator Loss: 0.026425 	D(x): 0.805022 	D(G(z)): 0.375421 / 0.052251
+Epoch: 2 	Discriminator Loss: 0.001286 	Generator Loss: 0.024148 	D(x): 0.889257 	D(G(z)): 0.163492 / 0.003448
+Epoch: 3 	Discriminator Loss: 0.000345 	Generator Loss: 0.017489 	D(x): 0.956111 	D(G(z)): 0.077194 / 0.001669
+Epoch: 4 	Discriminator Loss: 0.000142 	Generator Loss: 0.013663 	D(x): 0.977026 	D(G(z)): 0.045112 / 0.001222
+Epoch: 5 	Discriminator Loss: 0.000091 	Generator Loss: 0.011106 	D(x): 0.980105 	D(G(z)): 0.031034 / 0.001113
+Epoch: 6 	Discriminator Loss: 0.000043 	Generator Loss: 0.009331 	D(x): 0.989357 	D(G(z)): 0.021155 / 0.001108
+Epoch: 7 	Discriminator Loss: 0.000033 	Generator Loss: 0.008226 	D(x): 0.990496 	D(G(z)): 0.018693 / 0.000854
+Epoch: 8 	Discriminator Loss: 0.000023 	Generator Loss: 0.007237 	D(x): 0.990403 	D(G(z)): 0.012831 / 0.000811
+Epoch: 9 	Discriminator Loss: 0.000014 	Generator Loss: 0.006148 	D(x): 0.994814 	D(G(z)): 0.010430 / 0.001015
+Epoch: 10 	Discriminator Loss: 0.000012 	Generator Loss: 0.005822 	D(x): 0.996034 	D(G(z)): 0.010510 / 0.000724
+Epoch: 11 	Discriminator Loss: 0.000012 	Generator Loss: 0.005186 	D(x): 0.994042 	D(G(z)): 0.009954 / 0.000841
+Epoch: 12 	Discriminator Loss: 0.001290 	Generator Loss: 0.005060 	D(x): 0.730096 	D(G(z)): 0.067108 / 0.007366
+Epoch: 13 	Discriminator Loss: 0.000032 	Generator Loss: 0.003140 	D(x): 0.978582 	D(G(z)): 0.029180 / 0.007975
+Epoch: 14 	Discriminator Loss: 0.000230 	Generator Loss: 0.004512 	D(x): 0.887531 	D(G(z)): 0.105468 / 0.001325
+Epoch: 15 	Discriminator Loss: 0.000049 	Generator Loss: 0.003138 	D(x): 0.981226 	D(G(z)): 0.062315 / 0.009796
+Epoch: 16 	Discriminator Loss: 0.000073 	Generator Loss: 0.002837 	D(x): 0.955143 	D(G(z)): 0.084105 / 0.005087
+Epoch: 17 	Discriminator Loss: 0.000052 	Generator Loss: 0.003335 	D(x): 0.957803 	D(G(z)): 0.048138 / 0.001338
+Epoch: 18 	Discriminator Loss: 0.000048 	Generator Loss: 0.003410 	D(x): 0.963871 	D(G(z)): 0.051390 / 0.002443
+Epoch: 19 	Discriminator Loss: 0.000113 	Generator Loss: 0.003055 	D(x): 0.924579 	D(G(z)): 0.087953 / 0.002667
+Epoch: 20 	Discriminator Loss: 0.000036 	Generator Loss: 0.003171 	D(x): 0.972365 	D(G(z)): 0.053361 / 0.001130
+Epoch: 21 	Discriminator Loss: 0.000026 	Generator Loss: 0.002639 	D(x): 0.980123 	D(G(z)): 0.042627 / 0.001843
+Epoch: 22 	Discriminator Loss: 0.000022 	Generator Loss: 0.002129 	D(x): 0.981616 	D(G(z)): 0.040243 / 0.003689
+Epoch: 23 	Discriminator Loss: 0.000017 	Generator Loss: 0.002097 	D(x): 0.983769 	D(G(z)): 0.028244 / 0.003156
+Epoch: 24 	Discriminator Loss: 0.000015 	Generator Loss: 0.002142 	D(x): 0.986514 	D(G(z)): 0.029228 / 0.002656
+Epoch: 25 	Discriminator Loss: 0.000011 	Generator Loss: 0.001950 	D(x): 0.986994 	D(G(z)): 0.020716 / 0.003360
+Epoch: 26 	Discriminator Loss: 0.000009 	Generator Loss: 0.001787 	D(x): 0.989873 	D(G(z)): 0.019057 / 0.003623
+Epoch: 27 	Discriminator Loss: 0.000006 	Generator Loss: 0.001879 	D(x): 0.993007 	D(G(z)): 0.011427 / 0.002441
+Epoch: 28 	Discriminator Loss: 0.000008 	Generator Loss: 0.001754 	D(x): 0.990830 	D(G(z)): 0.014516 / 0.002982
+Epoch: 29 	Discriminator Loss: 0.000004 	Generator Loss: 0.001640 	D(x): 0.995138 	D(G(z)): 0.009077 / 0.003450
+Epoch: 30 	Discriminator Loss: 0.000004 	Generator Loss: 0.001566 	D(x): 0.996048 	D(G(z)): 0.008747 / 0.003927
+Epoch: 31 	Discriminator Loss: 0.000004 	Generator Loss: 0.001520 	D(x): 0.996372 	D(G(z)): 0.009969 / 0.004384
+Epoch: 32 	Discriminator Loss: 0.000005 	Generator Loss: 0.001447 	D(x): 0.993246 	D(G(z)): 0.013417 / 0.004396
+Epoch: 33 	Discriminator Loss: 0.000004 	Generator Loss: 0.001467 	D(x): 0.995777 	D(G(z)): 0.010035 / 0.003132
+Epoch: 34 	Discriminator Loss: 0.000002 	Generator Loss: 0.001526 	D(x): 0.997151 	D(G(z)): 0.005608 / 0.002403
+Epoch: 35 	Discriminator Loss: 0.000002 	Generator Loss: 0.001456 	D(x): 0.996449 	D(G(z)): 0.004293 / 0.002607
+Epoch: 36 	Discriminator Loss: 0.000005 	Generator Loss: 0.001414 	D(x): 0.989170 	D(G(z)): 0.010108 / 0.027815
+Epoch: 37 	Discriminator Loss: 0.000235 	Generator Loss: 0.001121 	D(x): 0.850461 	D(G(z)): 0.107809 / 0.024135
+Epoch: 38 	Discriminator Loss: 0.000031 	Generator Loss: 0.001082 	D(x): 0.940316 	D(G(z)): 0.068055 / 0.008928
+Epoch: 39 	Discriminator Loss: 0.000017 	Generator Loss: 0.001117 	D(x): 0.955098 	D(G(z)): 0.030930 / 0.008101
+Epoch: 40 	Discriminator Loss: 0.000115 	Generator Loss: 0.001173 	D(x): 0.834135 	D(G(z)): 0.119864 / 0.019579
+Epoch: 41 	Discriminator Loss: 0.000096 	Generator Loss: 0.000804 	D(x): 0.890675 	D(G(z)): 0.146404 / 0.054907
+Epoch: 42 	Discriminator Loss: 0.000158 	Generator Loss: 0.000814 	D(x): 0.804447 	D(G(z)): 0.126516 / 0.053498
+Epoch: 43 	Discriminator Loss: 0.000131 	Generator Loss: 0.000542 	D(x): 0.825283 	D(G(z)): 0.240910 / 0.116597
+Epoch: 44 	Discriminator Loss: 0.000091 	Generator Loss: 0.000499 	D(x): 0.861588 	D(G(z)): 0.213914 / 0.120713
+Epoch: 45 	Discriminator Loss: 0.000105 	Generator Loss: 0.000532 	D(x): 0.796453 	D(G(z)): 0.187509 / 0.101310
+Epoch: 46 	Discriminator Loss: 0.000123 	Generator Loss: 0.000503 	D(x): 0.781298 	D(G(z)): 0.223592 / 0.114933
+Epoch: 47 	Discriminator Loss: 0.000091 	Generator Loss: 0.000561 	D(x): 0.801544 	D(G(z)): 0.192951 / 0.069343
+Epoch: 48 	Discriminator Loss: 0.000123 	Generator Loss: 0.000542 	D(x): 0.794032 	D(G(z)): 0.242206 / 0.103630
+Epoch: 49 	Discriminator Loss: 0.000135 	Generator Loss: 0.000417 	D(x): 0.725534 	D(G(z)): 0.214513 / 0.134143
+Epoch: 50 	Discriminator Loss: 0.000096 	Generator Loss: 0.000479 	D(x): 0.790242 	D(G(z)): 0.210490 / 0.092287
+Epoch: 51 	Discriminator Loss: 0.000122 	Generator Loss: 0.000574 	D(x): 0.779686 	D(G(z)): 0.202935 / 0.090345
+Epoch: 52 	Discriminator Loss: 0.000114 	Generator Loss: 0.000462 	D(x): 0.736534 	D(G(z)): 0.241450 / 0.094176
+Epoch: 53 	Discriminator Loss: 0.000120 	Generator Loss: 0.000355 	D(x): 0.724340 	D(G(z)): 0.296726 / 0.146385
+Epoch: 54 	Discriminator Loss: 0.000125 	Generator Loss: 0.000365 	D(x): 0.703145 	D(G(z)): 0.285823 / 0.154914
+Epoch: 55 	Discriminator Loss: 0.000121 	Generator Loss: 0.000324 	D(x): 0.710085 	D(G(z)): 0.281678 / 0.179175
+Epoch: 56 	Discriminator Loss: 0.000117 	Generator Loss: 0.000374 	D(x): 0.718058 	D(G(z)): 0.252791 / 0.146995
+Epoch: 57 	Discriminator Loss: 0.000101 	Generator Loss: 0.000380 	D(x): 0.745371 	D(G(z)): 0.262377 / 0.124037
+Epoch: 58 	Discriminator Loss: 0.000094 	Generator Loss: 0.000357 	D(x): 0.748212 	D(G(z)): 0.254508 / 0.122477
+Epoch: 59 	Discriminator Loss: 0.000110 	Generator Loss: 0.000364 	D(x): 0.718040 	D(G(z)): 0.278668 / 0.130521
+Epoch: 60 	Discriminator Loss: 0.000112 	Generator Loss: 0.000331 	D(x): 0.718564 	D(G(z)): 0.282615 / 0.156550
+Epoch: 61 	Discriminator Loss: 0.000088 	Generator Loss: 0.000342 	D(x): 0.750273 	D(G(z)): 0.249285 / 0.126856
+Epoch: 62 	Discriminator Loss: 0.000124 	Generator Loss: 0.000317 	D(x): 0.665997 	D(G(z)): 0.287546 / 0.178811
+Epoch: 63 	Discriminator Loss: 0.000081 	Generator Loss: 0.000337 	D(x): 0.775297 	D(G(z)): 0.242987 / 0.106886
+Epoch: 64 	Discriminator Loss: 0.000114 	Generator Loss: 0.000301 	D(x): 0.693042 	D(G(z)): 0.288124 / 0.172515
+Epoch: 65 	Discriminator Loss: 0.000103 	Generator Loss: 0.000313 	D(x): 0.727309 	D(G(z)): 0.283063 / 0.148692
+Epoch: 66 	Discriminator Loss: 0.000087 	Generator Loss: 0.000301 	D(x): 0.736286 	D(G(z)): 0.259193 / 0.129696
+Epoch: 67 	Discriminator Loss: 0.000102 	Generator Loss: 0.000286 	D(x): 0.722135 	D(G(z)): 0.299682 / 0.165836
+Epoch: 68 	Discriminator Loss: 0.000093 	Generator Loss: 0.000317 	D(x): 0.726491 	D(G(z)): 0.279335 / 0.126470
+Epoch: 69 	Discriminator Loss: 0.000105 	Generator Loss: 0.000331 	D(x): 0.696516 	D(G(z)): 0.288782 / 0.118036
+Epoch: 70 	Discriminator Loss: 0.000083 	Generator Loss: 0.000302 	D(x): 0.738808 	D(G(z)): 0.269487 / 0.118996
+Epoch: 71 	Discriminator Loss: 0.000087 	Generator Loss: 0.000323 	D(x): 0.730634 	D(G(z)): 0.251188 / 0.127367
+Epoch: 72 	Discriminator Loss: 0.000082 	Generator Loss: 0.000272 	D(x): 0.738864 	D(G(z)): 0.265715 / 0.142787
+Epoch: 73 	Discriminator Loss: 0.000084 	Generator Loss: 0.000274 	D(x): 0.738028 	D(G(z)): 0.288299 / 0.136174
+Epoch: 74 	Discriminator Loss: 0.000099 	Generator Loss: 0.000291 	D(x): 0.688125 	D(G(z)): 0.289820 / 0.142026
+Epoch: 75 	Discriminator Loss: 0.000070 	Generator Loss: 0.000299 	D(x): 0.774420 	D(G(z)): 0.229649 / 0.110090
+Epoch: 76 	Discriminator Loss: 0.000068 	Generator Loss: 0.000270 	D(x): 0.764540 	D(G(z)): 0.250068 / 0.115815
+Epoch: 77 	Discriminator Loss: 0.000103 	Generator Loss: 0.000230 	D(x): 0.673885 	D(G(z)): 0.310156 / 0.201151
+Epoch: 78 	Discriminator Loss: 0.000096 	Generator Loss: 0.000225 	D(x): 0.676625 	D(G(z)): 0.322428 / 0.192385
+Epoch: 79 	Discriminator Loss: 0.000083 	Generator Loss: 0.000286 	D(x): 0.737898 	D(G(z)): 0.294934 / 0.122332
+Epoch: 80 	Discriminator Loss: 0.000095 	Generator Loss: 0.000233 	D(x): 0.657700 	D(G(z)): 0.307699 / 0.151717
+Epoch: 81 	Discriminator Loss: 0.000092 	Generator Loss: 0.000208 	D(x): 0.690597 	D(G(z)): 0.329745 / 0.184909
+Epoch: 82 	Discriminator Loss: 0.000070 	Generator Loss: 0.000231 	D(x): 0.733706 	D(G(z)): 0.269204 / 0.138210
+Epoch: 83 	Discriminator Loss: 0.000088 	Generator Loss: 0.000237 	D(x): 0.672619 	D(G(z)): 0.304431 / 0.161851
+Epoch: 84 	Discriminator Loss: 0.000068 	Generator Loss: 0.000239 	D(x): 0.749348 	D(G(z)): 0.275991 / 0.111061
+Epoch: 85 	Discriminator Loss: 0.000085 	Generator Loss: 0.000228 	D(x): 0.684147 	D(G(z)): 0.285911 / 0.172620
+Epoch: 86 	Discriminator Loss: 0.000073 	Generator Loss: 0.000247 	D(x): 0.726708 	D(G(z)): 0.287920 / 0.119081
+Epoch: 87 	Discriminator Loss: 0.000079 	Generator Loss: 0.000243 	D(x): 0.715186 	D(G(z)): 0.308168 / 0.145881
+Epoch: 88 	Discriminator Loss: 0.000084 	Generator Loss: 0.000241 	D(x): 0.676591 	D(G(z)): 0.300173 / 0.134599
+Epoch: 89 	Discriminator Loss: 0.000078 	Generator Loss: 0.000230 	D(x): 0.689673 	D(G(z)): 0.298221 / 0.123550
+Epoch: 90 	Discriminator Loss: 0.000083 	Generator Loss: 0.000215 	D(x): 0.679155 	D(G(z)): 0.309245 / 0.166548
+Epoch: 91 	Discriminator Loss: 0.000071 	Generator Loss: 0.000211 	D(x): 0.715530 	D(G(z)): 0.318099 / 0.129990
+Epoch: 92 	Discriminator Loss: 0.000074 	Generator Loss: 0.000212 	D(x): 0.696265 	D(G(z)): 0.280283 / 0.146824
+Epoch: 93 	Discriminator Loss: 0.000072 	Generator Loss: 0.000220 	D(x): 0.683693 	D(G(z)): 0.293171 / 0.120512
+Epoch: 94 	Discriminator Loss: 0.000068 	Generator Loss: 0.000206 	D(x): 0.698056 	D(G(z)): 0.289307 / 0.139917
+Epoch: 95 	Discriminator Loss: 0.000062 	Generator Loss: 0.000235 	D(x): 0.738644 	D(G(z)): 0.279531 / 0.110095
+Epoch: 96 	Discriminator Loss: 0.000057 	Generator Loss: 0.000233 	D(x): 0.744172 	D(G(z)): 0.245861 / 0.107916
+Epoch: 97 	Discriminator Loss: 0.000075 	Generator Loss: 0.000220 	D(x): 0.703394 	D(G(z)): 0.305102 / 0.153643
+Epoch: 98 	Discriminator Loss: 0.000081 	Generator Loss: 0.000231 	D(x): 0.662388 	D(G(z)): 0.320424 / 0.121279
+Epoch: 99 	Discriminator Loss: 0.000074 	Generator Loss: 0.000206 	D(x): 0.690037 	D(G(z)): 0.314727 / 0.144070
+Epoch: 100 	Discriminator Loss: 0.000062 	Generator Loss: 0.000189 	D(x): 0.699573 	D(G(z)): 0.272037 / 0.142872
+Epoch: 101 	Discriminator Loss: 0.000058 	Generator Loss: 0.000212 	D(x): 0.735244 	D(G(z)): 0.274211 / 0.125362
+Epoch: 102 	Discriminator Loss: 0.000068 	Generator Loss: 0.000188 	D(x): 0.689982 	D(G(z)): 0.299222 / 0.155478
+Epoch: 103 	Discriminator Loss: 0.000051 	Generator Loss: 0.000209 	D(x): 0.763424 	D(G(z)): 0.257748 / 0.122811
+Epoch: 104 	Discriminator Loss: 0.000063 	Generator Loss: 0.000185 	D(x): 0.699847 	D(G(z)): 0.276797 / 0.150232
+Epoch: 105 	Discriminator Loss: 0.000062 	Generator Loss: 0.000212 	D(x): 0.711685 	D(G(z)): 0.271511 / 0.131050
+Epoch: 106 	Discriminator Loss: 0.000055 	Generator Loss: 0.000181 	D(x): 0.732503 	D(G(z)): 0.275208 / 0.134224
+Epoch: 107 	Discriminator Loss: 0.000049 	Generator Loss: 0.000189 	D(x): 0.748547 	D(G(z)): 0.251068 / 0.125582
+Epoch: 108 	Discriminator Loss: 0.000058 	Generator Loss: 0.000214 	D(x): 0.736272 	D(G(z)): 0.276733 / 0.120979
+Epoch: 109 	Discriminator Loss: 0.000065 	Generator Loss: 0.000182 	D(x): 0.692094 	D(G(z)): 0.279137 / 0.163232
+Epoch: 110 	Discriminator Loss: 0.000058 	Generator Loss: 0.000174 	D(x): 0.709452 	D(G(z)): 0.283302 / 0.145915
+Epoch: 111 	Discriminator Loss: 0.000050 	Generator Loss: 0.000195 	D(x): 0.743359 	D(G(z)): 0.260383 / 0.113391
+Epoch: 112 	Discriminator Loss: 0.000045 	Generator Loss: 0.000189 	D(x): 0.761983 	D(G(z)): 0.248545 / 0.113380
+Epoch: 113 	Discriminator Loss: 0.000067 	Generator Loss: 0.000174 	D(x): 0.691086 	D(G(z)): 0.293056 / 0.176627
+Epoch: 114 	Discriminator Loss: 0.000050 	Generator Loss: 0.000172 	D(x): 0.737679 	D(G(z)): 0.258388 / 0.143989
+Epoch: 115 	Discriminator Loss: 0.000047 	Generator Loss: 0.000181 	D(x): 0.755276 	D(G(z)): 0.264295 / 0.131783
+Epoch: 116 	Discriminator Loss: 0.000055 	Generator Loss: 0.000170 	D(x): 0.699115 	D(G(z)): 0.246851 / 0.139837
+Epoch: 117 	Discriminator Loss: 0.000050 	Generator Loss: 0.000175 	D(x): 0.743186 	D(G(z)): 0.264396 / 0.125998
+Epoch: 118 	Discriminator Loss: 0.000053 	Generator Loss: 0.000165 	D(x): 0.725600 	D(G(z)): 0.284125 / 0.159594
+Epoch: 119 	Discriminator Loss: 0.000043 	Generator Loss: 0.000173 	D(x): 0.758568 	D(G(z)): 0.235195 / 0.126919
+Epoch: 120 	Discriminator Loss: 0.000068 	Generator Loss: 0.000160 	D(x): 0.688529 	D(G(z)): 0.307580 / 0.179174
+Epoch: 121 	Discriminator Loss: 0.000039 	Generator Loss: 0.000159 	D(x): 0.756082 	D(G(z)): 0.232147 / 0.120014
+Epoch: 122 	Discriminator Loss: 0.000044 	Generator Loss: 0.000174 	D(x): 0.756331 	D(G(z)): 0.248961 / 0.139098
+Epoch: 123 	Discriminator Loss: 0.000056 	Generator Loss: 0.000165 	D(x): 0.726340 	D(G(z)): 0.279624 / 0.166753
+Epoch: 124 	Discriminator Loss: 0.000053 	Generator Loss: 0.000148 	D(x): 0.701376 	D(G(z)): 0.289338 / 0.158387
+Epoch: 125 	Discriminator Loss: 0.000050 	Generator Loss: 0.000171 	D(x): 0.718701 	D(G(z)): 0.268967 / 0.130977
+Epoch: 126 	Discriminator Loss: 0.000048 	Generator Loss: 0.000161 	D(x): 0.707938 	D(G(z)): 0.263593 / 0.136364
+Epoch: 127 	Discriminator Loss: 0.000043 	Generator Loss: 0.000172 	D(x): 0.739836 	D(G(z)): 0.250784 / 0.120406
+Epoch: 128 	Discriminator Loss: 0.000057 	Generator Loss: 0.000146 	D(x): 0.719519 	D(G(z)): 0.300349 / 0.193903
+Epoch: 129 	Discriminator Loss: 0.000048 	Generator Loss: 0.000148 	D(x): 0.709253 	D(G(z)): 0.283893 / 0.137826
+Epoch: 130 	Discriminator Loss: 0.000062 	Generator Loss: 0.000131 	D(x): 0.694452 	D(G(z)): 0.306605 / 0.219951
+Epoch: 131 	Discriminator Loss: 0.000041 	Generator Loss: 0.000140 	D(x): 0.736752 	D(G(z)): 0.258167 / 0.132958
+Epoch: 132 	Discriminator Loss: 0.000050 	Generator Loss: 0.000152 	D(x): 0.732258 	D(G(z)): 0.287857 / 0.160785
+Epoch: 133 	Discriminator Loss: 0.000047 	Generator Loss: 0.000159 	D(x): 0.727639 	D(G(z)): 0.268908 / 0.144412
+Epoch: 134 	Discriminator Loss: 0.000040 	Generator Loss: 0.000154 	D(x): 0.749291 	D(G(z)): 0.238224 / 0.128503
+Epoch: 135 	Discriminator Loss: 0.000037 	Generator Loss: 0.000154 	D(x): 0.773824 	D(G(z)): 0.250154 / 0.122727
+Epoch: 136 	Discriminator Loss: 0.000045 	Generator Loss: 0.000150 	D(x): 0.742427 	D(G(z)): 0.262720 / 0.157837
+Epoch: 137 	Discriminator Loss: 0.000044 	Generator Loss: 0.000153 	D(x): 0.728708 	D(G(z)): 0.243648 / 0.145260
+Epoch: 138 	Discriminator Loss: 0.000055 	Generator Loss: 0.000142 	D(x): 0.706488 	D(G(z)): 0.301797 / 0.173722
+Epoch: 139 	Discriminator Loss: 0.000041 	Generator Loss: 0.000150 	D(x): 0.747061 	D(G(z)): 0.240435 / 0.132647
+Epoch: 140 	Discriminator Loss: 0.000050 	Generator Loss: 0.000134 	D(x): 0.704560 	D(G(z)): 0.285754 / 0.173501
+Epoch: 141 	Discriminator Loss: 0.000039 	Generator Loss: 0.000138 	D(x): 0.731040 	D(G(z)): 0.258418 / 0.137691
+Epoch: 142 	Discriminator Loss: 0.000048 	Generator Loss: 0.000136 	D(x): 0.723243 	D(G(z)): 0.274051 / 0.188098
+Epoch: 143 	Discriminator Loss: 0.000042 	Generator Loss: 0.000144 	D(x): 0.769917 	D(G(z)): 0.270277 / 0.141092
+Epoch: 144 	Discriminator Loss: 0.000059 	Generator Loss: 0.000115 	D(x): 0.665573 	D(G(z)): 0.300841 / 0.212867
+Epoch: 145 	Discriminator Loss: 0.000043 	Generator Loss: 0.000131 	D(x): 0.699789 	D(G(z)): 0.265974 / 0.159063
+Epoch: 146 	Discriminator Loss: 0.000049 	Generator Loss: 0.000137 	D(x): 0.703230 	D(G(z)): 0.304985 / 0.147019
+Epoch: 147 	Discriminator Loss: 0.000041 	Generator Loss: 0.000124 	D(x): 0.720169 	D(G(z)): 0.256911 / 0.162768
+Epoch: 148 	Discriminator Loss: 0.000037 	Generator Loss: 0.000130 	D(x): 0.763887 	D(G(z)): 0.263285 / 0.145425
+Epoch: 149 	Discriminator Loss: 0.000039 	Generator Loss: 0.000129 	D(x): 0.734255 	D(G(z)): 0.262573 / 0.147774
+Epoch: 150 	Discriminator Loss: 0.000053 	Generator Loss: 0.000127 	D(x): 0.703314 	D(G(z)): 0.301089 / 0.202874
+Epoch: 151 	Discriminator Loss: 0.000040 	Generator Loss: 0.000126 	D(x): 0.733960 	D(G(z)): 0.283832 / 0.156644
+Epoch: 152 	Discriminator Loss: 0.000037 	Generator Loss: 0.000123 	D(x): 0.728442 	D(G(z)): 0.252386 / 0.150967
+Epoch: 153 	Discriminator Loss: 0.000037 	Generator Loss: 0.000126 	D(x): 0.728034 	D(G(z)): 0.248705 / 0.133288
+Epoch: 154 	Discriminator Loss: 0.000052 	Generator Loss: 0.000125 	D(x): 0.707484 	D(G(z)): 0.311203 / 0.195222
+Epoch: 155 	Discriminator Loss: 0.000038 	Generator Loss: 0.000119 	D(x): 0.750562 	D(G(z)): 0.290160 / 0.163045
+Epoch: 156 	Discriminator Loss: 0.000037 	Generator Loss: 0.000120 	D(x): 0.736891 	D(G(z)): 0.264216 / 0.154425
+Epoch: 157 	Discriminator Loss: 0.000036 	Generator Loss: 0.000119 	D(x): 0.737973 	D(G(z)): 0.251086 / 0.156215
+Epoch: 158 	Discriminator Loss: 0.000044 	Generator Loss: 0.000128 	D(x): 0.706222 	D(G(z)): 0.263473 / 0.184953
+Epoch: 159 	Discriminator Loss: 0.000034 	Generator Loss: 0.000112 	D(x): 0.743873 	D(G(z)): 0.253589 / 0.148956
+Epoch: 160 	Discriminator Loss: 0.000046 	Generator Loss: 0.000121 	D(x): 0.713355 	D(G(z)): 0.280955 / 0.188844
+Epoch: 161 	Discriminator Loss: 0.000032 	Generator Loss: 0.000111 	D(x): 0.748674 	D(G(z)): 0.253973 / 0.147562
+Epoch: 162 	Discriminator Loss: 0.000029 	Generator Loss: 0.000125 	D(x): 0.786918 	D(G(z)): 0.234641 / 0.133949
+Epoch: 163 	Discriminator Loss: 0.000043 	Generator Loss: 0.000120 	D(x): 0.711182 	D(G(z)): 0.290384 / 0.172928
+Epoch: 164 	Discriminator Loss: 0.000036 	Generator Loss: 0.000115 	D(x): 0.740165 	D(G(z)): 0.261579 / 0.159430
+Epoch: 165 	Discriminator Loss: 0.000039 	Generator Loss: 0.000125 	D(x): 0.721397 	D(G(z)): 0.273869 / 0.152571
+Epoch: 166 	Discriminator Loss: 0.000039 	Generator Loss: 0.000106 	D(x): 0.721960 	D(G(z)): 0.269565 / 0.175686
+Epoch: 167 	Discriminator Loss: 0.000045 	Generator Loss: 0.000103 	D(x): 0.670832 	D(G(z)): 0.283357 / 0.237633
+Epoch: 168 	Discriminator Loss: 0.000042 	Generator Loss: 0.000108 	D(x): 0.732711 	D(G(z)): 0.307900 / 0.148719
+Epoch: 169 	Discriminator Loss: 0.000042 	Generator Loss: 0.000105 	D(x): 0.687213 	D(G(z)): 0.287658 / 0.212195
+Epoch: 170 	Discriminator Loss: 0.000034 	Generator Loss: 0.000107 	D(x): 0.761150 	D(G(z)): 0.273666 / 0.146995
+Epoch: 171 	Discriminator Loss: 0.000033 	Generator Loss: 0.000108 	D(x): 0.746640 	D(G(z)): 0.266298 / 0.149379
+Epoch: 172 	Discriminator Loss: 0.000028 	Generator Loss: 0.000105 	D(x): 0.773117 	D(G(z)): 0.223966 / 0.156307
+Epoch: 173 	Discriminator Loss: 0.000030 	Generator Loss: 0.000108 	D(x): 0.772968 	D(G(z)): 0.246230 / 0.146738
+Epoch: 174 	Discriminator Loss: 0.000037 	Generator Loss: 0.000104 	D(x): 0.732671 	D(G(z)): 0.278201 / 0.195554
+Epoch: 175 	Discriminator Loss: 0.000039 	Generator Loss: 0.000105 	D(x): 0.733578 	D(G(z)): 0.305758 / 0.194273
+Epoch: 176 	Discriminator Loss: 0.000037 	Generator Loss: 0.000099 	D(x): 0.712602 	D(G(z)): 0.275248 / 0.173062
+Epoch: 177 	Discriminator Loss: 0.000035 	Generator Loss: 0.000101 	D(x): 0.733801 	D(G(z)): 0.261228 / 0.199803
+Epoch: 178 	Discriminator Loss: 0.000032 	Generator Loss: 0.000105 	D(x): 0.731120 	D(G(z)): 0.247538 / 0.143465
+Epoch: 179 	Discriminator Loss: 0.000030 	Generator Loss: 0.000102 	D(x): 0.733262 	D(G(z)): 0.240200 / 0.149775
+Epoch: 180 	Discriminator Loss: 0.000034 	Generator Loss: 0.000109 	D(x): 0.741305 	D(G(z)): 0.265532 / 0.168802
+Epoch: 181 	Discriminator Loss: 0.000031 	Generator Loss: 0.000108 	D(x): 0.746857 	D(G(z)): 0.231969 / 0.165265
+Epoch: 182 	Discriminator Loss: 0.000027 	Generator Loss: 0.000099 	D(x): 0.758443 	D(G(z)): 0.234763 / 0.147649
+Epoch: 183 	Discriminator Loss: 0.000046 	Generator Loss: 0.000104 	D(x): 0.726880 	D(G(z)): 0.305057 / 0.232941
+Epoch: 184 	Discriminator Loss: 0.000036 	Generator Loss: 0.000091 	D(x): 0.685443 	D(G(z)): 0.280947 / 0.179038
+Epoch: 185 	Discriminator Loss: 0.000032 	Generator Loss: 0.000098 	D(x): 0.719522 	D(G(z)): 0.262295 / 0.149260
+Epoch: 186 	Discriminator Loss: 0.000026 	Generator Loss: 0.000100 	D(x): 0.770461 	D(G(z)): 0.231487 / 0.143214
+Epoch: 187 	Discriminator Loss: 0.000033 	Generator Loss: 0.000096 	D(x): 0.737735 	D(G(z)): 0.258991 / 0.188364
+Epoch: 188 	Discriminator Loss: 0.000027 	Generator Loss: 0.000105 	D(x): 0.764954 	D(G(z)): 0.247183 / 0.128323
+Epoch: 189 	Discriminator Loss: 0.000031 	Generator Loss: 0.000102 	D(x): 0.753542 	D(G(z)): 0.251965 / 0.175554
+Epoch: 190 	Discriminator Loss: 0.000036 	Generator Loss: 0.000092 	D(x): 0.712320 	D(G(z)): 0.272559 / 0.196585
+Epoch: 191 	Discriminator Loss: 0.000026 	Generator Loss: 0.000087 	D(x): 0.744236 	D(G(z)): 0.224153 / 0.176276
+Epoch: 192 	Discriminator Loss: 0.000033 	Generator Loss: 0.000097 	D(x): 0.736096 	D(G(z)): 0.277424 / 0.193252
+Epoch: 193 	Discriminator Loss: 0.000023 	Generator Loss: 0.000098 	D(x): 0.788117 	D(G(z)): 0.223975 / 0.136734
+Epoch: 194 	Discriminator Loss: 0.000031 	Generator Loss: 0.000096 	D(x): 0.739561 	D(G(z)): 0.251173 / 0.188572
+Epoch: 195 	Discriminator Loss: 0.000025 	Generator Loss: 0.000100 	D(x): 0.772808 	D(G(z)): 0.228860 / 0.137675
+Epoch: 196 	Discriminator Loss: 0.000031 	Generator Loss: 0.000102 	D(x): 0.749359 	D(G(z)): 0.270712 / 0.163366
+Epoch: 197 	Discriminator Loss: 0.000043 	Generator Loss: 0.000085 	D(x): 0.694783 	D(G(z)): 0.312008 / 0.258828
+Epoch: 198 	Discriminator Loss: 0.000025 	Generator Loss: 0.000093 	D(x): 0.776036 	D(G(z)): 0.255481 / 0.140504
+Epoch: 199 	Discriminator Loss: 0.000026 	Generator Loss: 0.000093 	D(x): 0.733680 	D(G(z)): 0.224845 / 0.144455
+Epoch: 200 	Discriminator Loss: 0.000024 	Generator Loss: 0.000096 	D(x): 0.775740 	D(G(z)): 0.221937 / 0.148864
+Epoch: 201 	Discriminator Loss: 0.000025 	Generator Loss: 0.000092 	D(x): 0.756498 	D(G(z)): 0.222549 / 0.151659
+Epoch: 202 	Discriminator Loss: 0.000023 	Generator Loss: 0.000096 	D(x): 0.810598 	D(G(z)): 0.242161 / 0.149299
+Epoch: 203 	Discriminator Loss: 0.000041 	Generator Loss: 0.000094 	D(x): 0.696669 	D(G(z)): 0.300629 / 0.234794
+Epoch: 204 	Discriminator Loss: 0.000025 	Generator Loss: 0.000086 	D(x): 0.745026 	D(G(z)): 0.249577 / 0.146048
+Epoch: 205 	Discriminator Loss: 0.000026 	Generator Loss: 0.000092 	D(x): 0.743592 	D(G(z)): 0.227712 / 0.170189
+Epoch: 206 	Discriminator Loss: 0.000022 	Generator Loss: 0.000089 	D(x): 0.766970 	D(G(z)): 0.216384 / 0.158070
+Epoch: 207 	Discriminator Loss: 0.000021 	Generator Loss: 0.000086 	D(x): 0.783958 	D(G(z)): 0.216739 / 0.146701
+Epoch: 208 	Discriminator Loss: 0.000038 	Generator Loss: 0.000088 	D(x): 0.712819 	D(G(z)): 0.310293 / 0.248404
+Epoch: 209 	Discriminator Loss: 0.000022 	Generator Loss: 0.000084 	D(x): 0.754784 	D(G(z)): 0.210229 / 0.154024
+Epoch: 210 	Discriminator Loss: 0.000025 	Generator Loss: 0.000087 	D(x): 0.777423 	D(G(z)): 0.253058 / 0.181210
+Epoch: 211 	Discriminator Loss: 0.000025 	Generator Loss: 0.000084 	D(x): 0.749040 	D(G(z)): 0.231057 / 0.181908
+Epoch: 212 	Discriminator Loss: 0.000026 	Generator Loss: 0.000085 	D(x): 0.742219 	D(G(z)): 0.242054 / 0.168995
+Epoch: 213 	Discriminator Loss: 0.000022 	Generator Loss: 0.000084 	D(x): 0.779673 	D(G(z)): 0.218018 / 0.160165
+Epoch: 214 	Discriminator Loss: 0.000021 	Generator Loss: 0.000084 	D(x): 0.787814 	D(G(z)): 0.213440 / 0.166073
+Epoch: 215 	Discriminator Loss: 0.000044 	Generator Loss: 0.000082 	D(x): 0.675800 	D(G(z)): 0.328802 / 0.278405
+Epoch: 216 	Discriminator Loss: 0.000026 	Generator Loss: 0.000077 	D(x): 0.732972 	D(G(z)): 0.264694 / 0.170070
+Epoch: 217 	Discriminator Loss: 0.000020 	Generator Loss: 0.000084 	D(x): 0.785387 	D(G(z)): 0.210204 / 0.153808
+Epoch: 218 	Discriminator Loss: 0.000019 	Generator Loss: 0.000083 	D(x): 0.782729 	D(G(z)): 0.194652 / 0.150671
+Epoch: 219 	Discriminator Loss: 0.000018 	Generator Loss: 0.000086 	D(x): 0.800682 	D(G(z)): 0.194818 / 0.150852
+Epoch: 220 	Discriminator Loss: 0.000029 	Generator Loss: 0.000088 	D(x): 0.750283 	D(G(z)): 0.271715 / 0.183173
+Epoch: 221 	Discriminator Loss: 0.000021 	Generator Loss: 0.000080 	D(x): 0.753640 	D(G(z)): 0.207349 / 0.161819
+Epoch: 222 	Discriminator Loss: 0.000022 	Generator Loss: 0.000084 	D(x): 0.778532 	D(G(z)): 0.232058 / 0.165808
+Epoch: 223 	Discriminator Loss: 0.000021 	Generator Loss: 0.000082 	D(x): 0.761100 	D(G(z)): 0.209583 / 0.153007
+Epoch: 224 	Discriminator Loss: 0.000023 	Generator Loss: 0.000083 	D(x): 0.760057 	D(G(z)): 0.228901 / 0.166434
+Epoch: 225 	Discriminator Loss: 0.000038 	Generator Loss: 0.000079 	D(x): 0.706733 	D(G(z)): 0.324068 / 0.250812
+Epoch: 226 	Discriminator Loss: 0.000030 	Generator Loss: 0.000075 	D(x): 0.693694 	D(G(z)): 0.269476 / 0.186083
+Epoch: 227 	Discriminator Loss: 0.000019 	Generator Loss: 0.000078 	D(x): 0.773909 	D(G(z)): 0.205894 / 0.143425
+Epoch: 228 	Discriminator Loss: 0.000019 	Generator Loss: 0.000083 	D(x): 0.791529 	D(G(z)): 0.206086 / 0.150739
+Epoch: 229 	Discriminator Loss: 0.000020 	Generator Loss: 0.000078 	D(x): 0.755732 	D(G(z)): 0.195713 / 0.159976
+Epoch: 230 	Discriminator Loss: 0.000018 	Generator Loss: 0.000079 	D(x): 0.790122 	D(G(z)): 0.203051 / 0.157501
+Epoch: 231 	Discriminator Loss: 0.000043 	Generator Loss: 0.000078 	D(x): 0.668659 	D(G(z)): 0.324482 / 0.262601
+Epoch: 232 	Discriminator Loss: 0.000025 	Generator Loss: 0.000076 	D(x): 0.718255 	D(G(z)): 0.268324 / 0.166049
+Epoch: 233 	Discriminator Loss: 0.000022 	Generator Loss: 0.000075 	D(x): 0.762373 	D(G(z)): 0.244698 / 0.165522
+Epoch: 234 	Discriminator Loss: 0.000019 	Generator Loss: 0.000078 	D(x): 0.787958 	D(G(z)): 0.220717 / 0.151527
+Epoch: 235 	Discriminator Loss: 0.000018 	Generator Loss: 0.000081 	D(x): 0.786626 	D(G(z)): 0.200989 / 0.136567
+Epoch: 236 	Discriminator Loss: 0.000021 	Generator Loss: 0.000081 	D(x): 0.768401 	D(G(z)): 0.227630 / 0.151746
+Epoch: 237 	Discriminator Loss: 0.000018 	Generator Loss: 0.000074 	D(x): 0.802516 	D(G(z)): 0.221238 / 0.165431
+Epoch: 238 	Discriminator Loss: 0.000020 	Generator Loss: 0.000082 	D(x): 0.793544 	D(G(z)): 0.231812 / 0.152599
+Epoch: 239 	Discriminator Loss: 0.000023 	Generator Loss: 0.000073 	D(x): 0.749829 	D(G(z)): 0.239166 / 0.185420
+Epoch: 240 	Discriminator Loss: 0.000018 	Generator Loss: 0.000080 	D(x): 0.791461 	D(G(z)): 0.209577 / 0.145860
+Epoch: 241 	Discriminator Loss: 0.000025 	Generator Loss: 0.000081 	D(x): 0.739910 	D(G(z)): 0.247107 / 0.182100
+Epoch: 242 	Discriminator Loss: 0.000018 	Generator Loss: 0.000075 	D(x): 0.790515 	D(G(z)): 0.212017 / 0.150181
+Epoch: 243 	Discriminator Loss: 0.000018 	Generator Loss: 0.000082 	D(x): 0.801871 	D(G(z)): 0.209398 / 0.147462
+Epoch: 244 	Discriminator Loss: 0.000016 	Generator Loss: 0.000076 	D(x): 0.796461 	D(G(z)): 0.196156 / 0.147364
+Epoch: 245 	Discriminator Loss: 0.000016 	Generator Loss: 0.000078 	D(x): 0.807990 	D(G(z)): 0.201925 / 0.150275
+Epoch: 246 	Discriminator Loss: 0.000015 	Generator Loss: 0.000075 	D(x): 0.817739 	D(G(z)): 0.190951 / 0.149072
+Epoch: 247 	Discriminator Loss: 0.000050 	Generator Loss: 0.000070 	D(x): 0.629349 	D(G(z)): 0.374536 / 0.331728
+Epoch: 248 	Discriminator Loss: 0.000043 	Generator Loss: 0.000042 	D(x): 0.552993 	D(G(z)): 0.445486 / 0.326026
+Epoch: 249 	Discriminator Loss: 0.000039 	Generator Loss: 0.000058 	D(x): 0.619031 	D(G(z)): 0.376781 / 0.269852
+Epoch: 250 	Discriminator Loss: 0.000032 	Generator Loss: 0.000076 	D(x): 0.681442 	D(G(z)): 0.335869 / 0.174255
+Epoch: 251 	Discriminator Loss: 0.000019 	Generator Loss: 0.000072 	D(x): 0.760045 	D(G(z)): 0.239762 / 0.146920
+Epoch: 252 	Discriminator Loss: 0.000019 	Generator Loss: 0.000073 	D(x): 0.785674 	D(G(z)): 0.240345 / 0.142948
+Epoch: 253 	Discriminator Loss: 0.000017 	Generator Loss: 0.000074 	D(x): 0.800453 	D(G(z)): 0.222298 / 0.142798
+Epoch: 254 	Discriminator Loss: 0.000017 	Generator Loss: 0.000072 	D(x): 0.793395 	D(G(z)): 0.216682 / 0.155437
+Epoch: 255 	Discriminator Loss: 0.000015 	Generator Loss: 0.000071 	D(x): 0.800335 	D(G(z)): 0.195178 / 0.147247
+Epoch: 256 	Discriminator Loss: 0.000016 	Generator Loss: 0.000074 	D(x): 0.803857 	D(G(z)): 0.194949 / 0.150012
+Epoch: 257 	Discriminator Loss: 0.000017 	Generator Loss: 0.000073 	D(x): 0.781149 	D(G(z)): 0.189831 / 0.161802
+Epoch: 258 	Discriminator Loss: 0.000036 	Generator Loss: 0.000077 	D(x): 0.719787 	D(G(z)): 0.308904 / 0.226708
+Epoch: 259 	Discriminator Loss: 0.000024 	Generator Loss: 0.000068 	D(x): 0.729698 	D(G(z)): 0.275756 / 0.177322
+Epoch: 260 	Discriminator Loss: 0.000016 	Generator Loss: 0.000075 	D(x): 0.789519 	D(G(z)): 0.202381 / 0.128666
+Epoch: 261 	Discriminator Loss: 0.000014 	Generator Loss: 0.000072 	D(x): 0.814150 	D(G(z)): 0.194704 / 0.141636
+Epoch: 262 	Discriminator Loss: 0.000014 	Generator Loss: 0.000073 	D(x): 0.814397 	D(G(z)): 0.185480 / 0.138469
+Epoch: 263 	Discriminator Loss: 0.000020 	Generator Loss: 0.000075 	D(x): 0.754862 	D(G(z)): 0.214964 / 0.188107
+Epoch: 264 	Discriminator Loss: 0.000019 	Generator Loss: 0.000071 	D(x): 0.786562 	D(G(z)): 0.243719 / 0.143350
+Epoch: 265 	Discriminator Loss: 0.000013 	Generator Loss: 0.000071 	D(x): 0.827590 	D(G(z)): 0.184913 / 0.130439
+Epoch: 266 	Discriminator Loss: 0.000012 	Generator Loss: 0.000076 	D(x): 0.836181 	D(G(z)): 0.179930 / 0.120833
+Epoch: 267 	Discriminator Loss: 0.000014 	Generator Loss: 0.000073 	D(x): 0.805338 	D(G(z)): 0.182959 / 0.141591
+Epoch: 268 	Discriminator Loss: 0.000027 	Generator Loss: 0.000075 	D(x): 0.708271 	D(G(z)): 0.264119 / 0.218350
+Epoch: 269 	Discriminator Loss: 0.000015 	Generator Loss: 0.000072 	D(x): 0.808649 	D(G(z)): 0.207146 / 0.129623
+Epoch: 270 	Discriminator Loss: 0.000012 	Generator Loss: 0.000072 	D(x): 0.825146 	D(G(z)): 0.177261 / 0.129380
+Epoch: 271 	Discriminator Loss: 0.000025 	Generator Loss: 0.000074 	D(x): 0.752941 	D(G(z)): 0.226018 / 0.220758
+Epoch: 272 	Discriminator Loss: 0.000039 	Generator Loss: 0.000053 	D(x): 0.626554 	D(G(z)): 0.411005 / 0.261215
+Epoch: 273 	Discriminator Loss: 0.000020 	Generator Loss: 0.000081 	D(x): 0.760170 	D(G(z)): 0.250236 / 0.131672
+Epoch: 274 	Discriminator Loss: 0.000014 	Generator Loss: 0.000075 	D(x): 0.800449 	D(G(z)): 0.181261 / 0.112956
+Epoch: 275 	Discriminator Loss: 0.000012 	Generator Loss: 0.000073 	D(x): 0.825372 	D(G(z)): 0.182955 / 0.112908
+Epoch: 276 	Discriminator Loss: 0.000011 	Generator Loss: 0.000075 	D(x): 0.821765 	D(G(z)): 0.153728 / 0.107338
+Epoch: 277 	Discriminator Loss: 0.000011 	Generator Loss: 0.000076 	D(x): 0.833773 	D(G(z)): 0.155215 / 0.113380
+Epoch: 278 	Discriminator Loss: 0.000011 	Generator Loss: 0.000078 	D(x): 0.841115 	D(G(z)): 0.159647 / 0.108994
+Epoch: 279 	Discriminator Loss: 0.000010 	Generator Loss: 0.000076 	D(x): 0.857654 	D(G(z)): 0.155319 / 0.114012
+Epoch: 280 	Discriminator Loss: 0.000012 	Generator Loss: 0.000075 	D(x): 0.816026 	D(G(z)): 0.160237 / 0.125245
+Epoch: 281 	Discriminator Loss: 0.000018 	Generator Loss: 0.000075 	D(x): 0.796210 	D(G(z)): 0.229757 / 0.173477
+Epoch: 282 	Discriminator Loss: 0.000030 	Generator Loss: 0.000071 	D(x): 0.684502 	D(G(z)): 0.295977 / 0.223535
+Epoch: 283 	Discriminator Loss: 0.000013 	Generator Loss: 0.000071 	D(x): 0.816001 	D(G(z)): 0.187914 / 0.116750
+Epoch: 284 	Discriminator Loss: 0.000011 	Generator Loss: 0.000074 	D(x): 0.836887 	D(G(z)): 0.155603 / 0.105095
+Epoch: 285 	Discriminator Loss: 0.000009 	Generator Loss: 0.000073 	D(x): 0.853835 	D(G(z)): 0.142324 / 0.109402
+Epoch: 286 	Discriminator Loss: 0.000010 	Generator Loss: 0.000074 	D(x): 0.848520 	D(G(z)): 0.151694 / 0.112215
+Epoch: 287 	Discriminator Loss: 0.000010 	Generator Loss: 0.000075 	D(x): 0.847378 	D(G(z)): 0.155874 / 0.109860
+Epoch: 288 	Discriminator Loss: 0.000012 	Generator Loss: 0.000075 	D(x): 0.831546 	D(G(z)): 0.165158 / 0.121123
+Epoch: 289 	Discriminator Loss: 0.000011 	Generator Loss: 0.000075 	D(x): 0.850714 	D(G(z)): 0.170089 / 0.130858
+Epoch: 290 	Discriminator Loss: 0.000039 	Generator Loss: 0.000067 	D(x): 0.656954 	D(G(z)): 0.340111 / 0.284033
+Epoch: 291 	Discriminator Loss: 0.000015 	Generator Loss: 0.000075 	D(x): 0.798814 	D(G(z)): 0.212459 / 0.119434
+Epoch: 292 	Discriminator Loss: 0.000012 	Generator Loss: 0.000071 	D(x): 0.822079 	D(G(z)): 0.176716 / 0.111488
+Epoch: 293 	Discriminator Loss: 0.000010 	Generator Loss: 0.000073 	D(x): 0.840521 	D(G(z)): 0.159494 / 0.105183
+Epoch: 294 	Discriminator Loss: 0.000010 	Generator Loss: 0.000076 	D(x): 0.849396 	D(G(z)): 0.157646 / 0.103221
+Epoch: 295 	Discriminator Loss: 0.000009 	Generator Loss: 0.000074 	D(x): 0.854899 	D(G(z)): 0.137248 / 0.098914
+Epoch: 296 	Discriminator Loss: 0.000011 	Generator Loss: 0.000071 	D(x): 0.834502 	D(G(z)): 0.165245 / 0.129392
+Epoch: 297 	Discriminator Loss: 0.000009 	Generator Loss: 0.000071 	D(x): 0.856219 	D(G(z)): 0.143715 / 0.113309
+Epoch: 298 	Discriminator Loss: 0.000010 	Generator Loss: 0.000073 	D(x): 0.849067 	D(G(z)): 0.157604 / 0.105551
+Epoch: 299 	Discriminator Loss: 0.000008 	Generator Loss: 0.000073 	D(x): 0.865300 	D(G(z)): 0.134905 / 0.104667
+Epoch: 300 	Discriminator Loss: 0.000014 	Generator Loss: 0.000072 	D(x): 0.800280 	D(G(z)): 0.155415 / 0.171910
+Epoch: 301 	Discriminator Loss: 0.000038 	Generator Loss: 0.000056 	D(x): 0.649647 	D(G(z)): 0.409106 / 0.286127
+Epoch: 302 	Discriminator Loss: 0.000017 	Generator Loss: 0.000070 	D(x): 0.750744 	D(G(z)): 0.223822 / 0.131695
+Epoch: 303 	Discriminator Loss: 0.000013 	Generator Loss: 0.000075 	D(x): 0.820770 	D(G(z)): 0.175158 / 0.112254
+Epoch: 304 	Discriminator Loss: 0.000010 	Generator Loss: 0.000075 	D(x): 0.841891 	D(G(z)): 0.151772 / 0.091634
+Epoch: 305 	Discriminator Loss: 0.000008 	Generator Loss: 0.000072 	D(x): 0.862198 	D(G(z)): 0.141250 / 0.098523
+Epoch: 306 	Discriminator Loss: 0.000008 	Generator Loss: 0.000073 	D(x): 0.857753 	D(G(z)): 0.131459 / 0.092873
+Epoch: 307 	Discriminator Loss: 0.000008 	Generator Loss: 0.000073 	D(x): 0.868648 	D(G(z)): 0.134299 / 0.103886
+Epoch: 308 	Discriminator Loss: 0.000008 	Generator Loss: 0.000074 	D(x): 0.871422 	D(G(z)): 0.140065 / 0.095649
+Epoch: 309 	Discriminator Loss: 0.000026 	Generator Loss: 0.000064 	D(x): 0.722805 	D(G(z)): 0.276295 / 0.245870
+Epoch: 310 	Discriminator Loss: 0.000019 	Generator Loss: 0.000070 	D(x): 0.744025 	D(G(z)): 0.250860 / 0.152504
+Epoch: 311 	Discriminator Loss: 0.000010 	Generator Loss: 0.000076 	D(x): 0.841124 	D(G(z)): 0.166776 / 0.088354
+Epoch: 312 	Discriminator Loss: 0.000008 	Generator Loss: 0.000077 	D(x): 0.871576 	D(G(z)): 0.128212 / 0.080844
+Epoch: 313 	Discriminator Loss: 0.000007 	Generator Loss: 0.000075 	D(x): 0.874076 	D(G(z)): 0.127159 / 0.082873
+Epoch: 314 	Discriminator Loss: 0.000008 	Generator Loss: 0.000073 	D(x): 0.871146 	D(G(z)): 0.127081 / 0.097118
+Epoch: 315 	Discriminator Loss: 0.000008 	Generator Loss: 0.000076 	D(x): 0.866404 	D(G(z)): 0.126899 / 0.086560
+Epoch: 316 	Discriminator Loss: 0.000006 	Generator Loss: 0.000074 	D(x): 0.886143 	D(G(z)): 0.114406 / 0.088217
+Epoch: 317 	Discriminator Loss: 0.000008 	Generator Loss: 0.000072 	D(x): 0.869184 	D(G(z)): 0.131140 / 0.106307
+Epoch: 318 	Discriminator Loss: 0.000029 	Generator Loss: 0.000062 	D(x): 0.695099 	D(G(z)): 0.304539 / 0.256984
+Epoch: 319 	Discriminator Loss: 0.000012 	Generator Loss: 0.000071 	D(x): 0.806856 	D(G(z)): 0.190732 / 0.109212
+Epoch: 320 	Discriminator Loss: 0.000008 	Generator Loss: 0.000073 	D(x): 0.853287 	D(G(z)): 0.135446 / 0.089516
+Epoch: 321 	Discriminator Loss: 0.000007 	Generator Loss: 0.000074 	D(x): 0.877718 	D(G(z)): 0.131825 / 0.080569
+Epoch: 322 	Discriminator Loss: 0.000006 	Generator Loss: 0.000074 	D(x): 0.882394 	D(G(z)): 0.112320 / 0.078544
+Epoch: 323 	Discriminator Loss: 0.000006 	Generator Loss: 0.000073 	D(x): 0.884000 	D(G(z)): 0.108622 / 0.082994
+Epoch: 324 	Discriminator Loss: 0.000006 	Generator Loss: 0.000072 	D(x): 0.883986 	D(G(z)): 0.110796 / 0.081257
+Epoch: 325 	Discriminator Loss: 0.000007 	Generator Loss: 0.000073 	D(x): 0.878753 	D(G(z)): 0.127023 / 0.095670
+Epoch: 326 	Discriminator Loss: 0.000024 	Generator Loss: 0.000070 	D(x): 0.770905 	D(G(z)): 0.216699 / 0.209278
+Epoch: 327 	Discriminator Loss: 0.000035 	Generator Loss: 0.000031 	D(x): 0.556797 	D(G(z)): 0.425436 / 0.370926
+Epoch: 328 	Discriminator Loss: 0.000025 	Generator Loss: 0.000045 	D(x): 0.647574 	D(G(z)): 0.376309 / 0.223398
+Epoch: 329 	Discriminator Loss: 0.000024 	Generator Loss: 0.000069 	D(x): 0.700671 	D(G(z)): 0.291032 / 0.167205
+Epoch: 330 	Discriminator Loss: 0.000012 	Generator Loss: 0.000072 	D(x): 0.809830 	D(G(z)): 0.197117 / 0.097790
+Epoch: 331 	Discriminator Loss: 0.000008 	Generator Loss: 0.000073 	D(x): 0.865984 	D(G(z)): 0.134203 / 0.080112
+Epoch: 332 	Discriminator Loss: 0.000006 	Generator Loss: 0.000073 	D(x): 0.884350 	D(G(z)): 0.121514 / 0.080898
+Epoch: 333 	Discriminator Loss: 0.000010 	Generator Loss: 0.000069 	D(x): 0.838740 	D(G(z)): 0.147448 / 0.140198
+Epoch: 334 	Discriminator Loss: 0.000013 	Generator Loss: 0.000078 	D(x): 0.817899 	D(G(z)): 0.196613 / 0.102338
+Epoch: 335 	Discriminator Loss: 0.000006 	Generator Loss: 0.000074 	D(x): 0.879756 	D(G(z)): 0.117484 / 0.074209
+Epoch: 336 	Discriminator Loss: 0.000006 	Generator Loss: 0.000073 	D(x): 0.893731 	D(G(z)): 0.114984 / 0.075328
+Epoch: 337 	Discriminator Loss: 0.000006 	Generator Loss: 0.000071 	D(x): 0.896165 	D(G(z)): 0.113487 / 0.078235
+Epoch: 338 	Discriminator Loss: 0.000005 	Generator Loss: 0.000072 	D(x): 0.899212 	D(G(z)): 0.106559 / 0.076345
+Epoch: 339 	Discriminator Loss: 0.000006 	Generator Loss: 0.000072 	D(x): 0.896194 	D(G(z)): 0.107045 / 0.079310
+Epoch: 340 	Discriminator Loss: 0.000006 	Generator Loss: 0.000071 	D(x): 0.894778 	D(G(z)): 0.108422 / 0.086780
+Epoch: 341 	Discriminator Loss: 0.000006 	Generator Loss: 0.000076 	D(x): 0.897861 	D(G(z)): 0.108574 / 0.074484
+Epoch: 342 	Discriminator Loss: 0.000005 	Generator Loss: 0.000073 	D(x): 0.897551 	D(G(z)): 0.102033 / 0.074883
+Epoch: 343 	Discriminator Loss: 0.000036 	Generator Loss: 0.000069 	D(x): 0.682082 	D(G(z)): 0.294525 / 0.267423
+Epoch: 344 	Discriminator Loss: 0.000021 	Generator Loss: 0.000059 	D(x): 0.715357 	D(G(z)): 0.303420 / 0.184736
+Epoch: 345 	Discriminator Loss: 0.000010 	Generator Loss: 0.000072 	D(x): 0.829530 	D(G(z)): 0.163569 / 0.079613
+Epoch: 346 	Discriminator Loss: 0.000007 	Generator Loss: 0.000074 	D(x): 0.882621 	D(G(z)): 0.132361 / 0.070544
+Epoch: 347 	Discriminator Loss: 0.000006 	Generator Loss: 0.000072 	D(x): 0.885588 	D(G(z)): 0.114941 / 0.071992
+Epoch: 348 	Discriminator Loss: 0.000005 	Generator Loss: 0.000072 	D(x): 0.896536 	D(G(z)): 0.102965 / 0.069051
+Epoch: 349 	Discriminator Loss: 0.000005 	Generator Loss: 0.000073 	D(x): 0.902169 	D(G(z)): 0.099015 / 0.067915
+Epoch: 350 	Discriminator Loss: 0.000005 	Generator Loss: 0.000073 	D(x): 0.895651 	D(G(z)): 0.102178 / 0.072276
+Epoch: 351 	Discriminator Loss: 0.000005 	Generator Loss: 0.000072 	D(x): 0.900453 	D(G(z)): 0.098308 / 0.070316
+Epoch: 352 	Discriminator Loss: 0.000005 	Generator Loss: 0.000072 	D(x): 0.891865 	D(G(z)): 0.097457 / 0.077798
+Epoch: 353 	Discriminator Loss: 0.000037 	Generator Loss: 0.000069 	D(x): 0.648272 	D(G(z)): 0.363022 / 0.295706
+Epoch: 354 	Discriminator Loss: 0.000020 	Generator Loss: 0.000069 	D(x): 0.736562 	D(G(z)): 0.284181 / 0.111438
+Epoch: 355 	Discriminator Loss: 0.000009 	Generator Loss: 0.000074 	D(x): 0.837929 	D(G(z)): 0.158374 / 0.070849
+Epoch: 356 	Discriminator Loss: 0.000006 	Generator Loss: 0.000076 	D(x): 0.883410 	D(G(z)): 0.113076 / 0.058162
+Epoch: 357 	Discriminator Loss: 0.000006 	Generator Loss: 0.000073 	D(x): 0.887007 	D(G(z)): 0.109501 / 0.066019
+Epoch: 358 	Discriminator Loss: 0.000005 	Generator Loss: 0.000070 	D(x): 0.900441 	D(G(z)): 0.106815 / 0.068709
+Epoch: 359 	Discriminator Loss: 0.000005 	Generator Loss: 0.000069 	D(x): 0.897252 	D(G(z)): 0.110692 / 0.076814
+Epoch: 360 	Discriminator Loss: 0.000005 	Generator Loss: 0.000071 	D(x): 0.903974 	D(G(z)): 0.091801 / 0.069189
+Epoch: 361 	Discriminator Loss: 0.000004 	Generator Loss: 0.000071 	D(x): 0.912024 	D(G(z)): 0.093986 / 0.068734
+Epoch: 362 	Discriminator Loss: 0.000005 	Generator Loss: 0.000071 	D(x): 0.903549 	D(G(z)): 0.094211 / 0.071138
+Epoch: 363 	Discriminator Loss: 0.000004 	Generator Loss: 0.000070 	D(x): 0.910829 	D(G(z)): 0.094607 / 0.069202
+Epoch: 364 	Discriminator Loss: 0.000004 	Generator Loss: 0.000072 	D(x): 0.910667 	D(G(z)): 0.082451 / 0.062947
+Epoch: 365 	Discriminator Loss: 0.000004 	Generator Loss: 0.000072 	D(x): 0.914996 	D(G(z)): 0.086750 / 0.067409
+Epoch: 366 	Discriminator Loss: 0.000005 	Generator Loss: 0.000072 	D(x): 0.904012 	D(G(z)): 0.096880 / 0.071034
+Epoch: 367 	Discriminator Loss: 0.000004 	Generator Loss: 0.000071 	D(x): 0.910718 	D(G(z)): 0.085908 / 0.068455
+Epoch: 368 	Discriminator Loss: 0.000004 	Generator Loss: 0.000071 	D(x): 0.918168 	D(G(z)): 0.087015 / 0.066208
+Epoch: 369 	Discriminator Loss: 0.000005 	Generator Loss: 0.000069 	D(x): 0.896701 	D(G(z)): 0.090948 / 0.087088
+Epoch: 370 	Discriminator Loss: 0.000031 	Generator Loss: 0.000070 	D(x): 0.704258 	D(G(z)): 0.314145 / 0.260225
+Epoch: 371 	Discriminator Loss: 0.000011 	Generator Loss: 0.000070 	D(x): 0.807429 	D(G(z)): 0.182843 / 0.101299
+Epoch: 372 	Discriminator Loss: 0.000005 	Generator Loss: 0.000070 	D(x): 0.890419 	D(G(z)): 0.109585 / 0.062883
+Epoch: 373 	Discriminator Loss: 0.000005 	Generator Loss: 0.000071 	D(x): 0.907654 	D(G(z)): 0.097877 / 0.061082
+Epoch: 374 	Discriminator Loss: 0.000004 	Generator Loss: 0.000073 	D(x): 0.908721 	D(G(z)): 0.087872 / 0.057204
+Epoch: 375 	Discriminator Loss: 0.000004 	Generator Loss: 0.000072 	D(x): 0.917770 	D(G(z)): 0.084977 / 0.058958
+Epoch: 376 	Discriminator Loss: 0.000004 	Generator Loss: 0.000073 	D(x): 0.919057 	D(G(z)): 0.082256 / 0.058559
+Epoch: 377 	Discriminator Loss: 0.000004 	Generator Loss: 0.000071 	D(x): 0.918099 	D(G(z)): 0.079510 / 0.058660
+Epoch: 378 	Discriminator Loss: 0.000004 	Generator Loss: 0.000072 	D(x): 0.918026 	D(G(z)): 0.077119 / 0.056912
+Epoch: 379 	Discriminator Loss: 0.000005 	Generator Loss: 0.000072 	D(x): 0.900513 	D(G(z)): 0.092771 / 0.075125
+Epoch: 380 	Discriminator Loss: 0.000004 	Generator Loss: 0.000072 	D(x): 0.924818 	D(G(z)): 0.078768 / 0.055901
+Epoch: 381 	Discriminator Loss: 0.000004 	Generator Loss: 0.000070 	D(x): 0.923477 	D(G(z)): 0.078198 / 0.058089
+Epoch: 382 	Discriminator Loss: 0.000003 	Generator Loss: 0.000070 	D(x): 0.928385 	D(G(z)): 0.075690 / 0.059689
+Epoch: 383 	Discriminator Loss: 0.000023 	Generator Loss: 0.000060 	D(x): 0.749905 	D(G(z)): 0.237656 / 0.219993
+Epoch: 384 	Discriminator Loss: 0.000021 	Generator Loss: 0.000062 	D(x): 0.712266 	D(G(z)): 0.305284 / 0.183254
+Epoch: 385 	Discriminator Loss: 0.000010 	Generator Loss: 0.000069 	D(x): 0.817107 	D(G(z)): 0.168104 / 0.087993
+Epoch: 386 	Discriminator Loss: 0.000004 	Generator Loss: 0.000075 	D(x): 0.904924 	D(G(z)): 0.087004 / 0.047743
+Epoch: 387 	Discriminator Loss: 0.000004 	Generator Loss: 0.000074 	D(x): 0.921861 	D(G(z)): 0.083423 / 0.048405
+Epoch: 388 	Discriminator Loss: 0.000003 	Generator Loss: 0.000073 	D(x): 0.922616 	D(G(z)): 0.076152 / 0.049284
+Epoch: 389 	Discriminator Loss: 0.000003 	Generator Loss: 0.000074 	D(x): 0.922744 	D(G(z)): 0.074081 / 0.048913
+Epoch: 390 	Discriminator Loss: 0.000003 	Generator Loss: 0.000070 	D(x): 0.922806 	D(G(z)): 0.075945 / 0.055817
+Epoch: 391 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.927700 	D(G(z)): 0.074440 / 0.053475
+Epoch: 392 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.929969 	D(G(z)): 0.069984 / 0.051230
+Epoch: 393 	Discriminator Loss: 0.000003 	Generator Loss: 0.000070 	D(x): 0.932156 	D(G(z)): 0.074063 / 0.056709
+Epoch: 394 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.932673 	D(G(z)): 0.066177 / 0.050416
+Epoch: 395 	Discriminator Loss: 0.000003 	Generator Loss: 0.000073 	D(x): 0.938172 	D(G(z)): 0.062709 / 0.047878
+Epoch: 396 	Discriminator Loss: 0.000014 	Generator Loss: 0.000068 	D(x): 0.796246 	D(G(z)): 0.194231 / 0.167674
+Epoch: 397 	Discriminator Loss: 0.000005 	Generator Loss: 0.000076 	D(x): 0.894933 	D(G(z)): 0.113759 / 0.049830
+Epoch: 398 	Discriminator Loss: 0.000003 	Generator Loss: 0.000076 	D(x): 0.922318 	D(G(z)): 0.078006 / 0.044307
+Epoch: 399 	Discriminator Loss: 0.000003 	Generator Loss: 0.000074 	D(x): 0.928714 	D(G(z)): 0.068936 / 0.045892
+Epoch: 400 	Discriminator Loss: 0.000003 	Generator Loss: 0.000075 	D(x): 0.934415 	D(G(z)): 0.064616 / 0.044017
+Epoch: 401 	Discriminator Loss: 0.000003 	Generator Loss: 0.000073 	D(x): 0.933592 	D(G(z)): 0.064572 / 0.046718
+Epoch: 402 	Discriminator Loss: 0.000003 	Generator Loss: 0.000074 	D(x): 0.934790 	D(G(z)): 0.060837 / 0.041650
+Epoch: 403 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.937295 	D(G(z)): 0.064293 / 0.048985
+Epoch: 404 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.936310 	D(G(z)): 0.064414 / 0.048212
+Epoch: 405 	Discriminator Loss: 0.000003 	Generator Loss: 0.000073 	D(x): 0.937714 	D(G(z)): 0.063981 / 0.047111
+Epoch: 406 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.937983 	D(G(z)): 0.061205 / 0.048955
+Epoch: 407 	Discriminator Loss: 0.000003 	Generator Loss: 0.000073 	D(x): 0.943455 	D(G(z)): 0.063905 / 0.047020
+Epoch: 408 	Discriminator Loss: 0.000003 	Generator Loss: 0.000071 	D(x): 0.931826 	D(G(z)): 0.069836 / 0.057269
+Epoch: 409 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.942134 	D(G(z)): 0.057504 / 0.043766
+Epoch: 410 	Discriminator Loss: 0.000002 	Generator Loss: 0.000075 	D(x): 0.941905 	D(G(z)): 0.055978 / 0.041070
+Epoch: 411 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.941235 	D(G(z)): 0.060739 / 0.043877
+Epoch: 412 	Discriminator Loss: 0.000002 	Generator Loss: 0.000075 	D(x): 0.941082 	D(G(z)): 0.055732 / 0.042810
+Epoch: 413 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.943531 	D(G(z)): 0.054645 / 0.044483
+Epoch: 414 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.945243 	D(G(z)): 0.052956 / 0.042953
+Epoch: 415 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.936925 	D(G(z)): 0.054021 / 0.057689
+Epoch: 416 	Discriminator Loss: 0.000039 	Generator Loss: 0.000044 	D(x): 0.597332 	D(G(z)): 0.398397 / 0.358005
+Epoch: 417 	Discriminator Loss: 0.000022 	Generator Loss: 0.000038 	D(x): 0.633273 	D(G(z)): 0.383746 / 0.233977
+Epoch: 418 	Discriminator Loss: 0.000019 	Generator Loss: 0.000064 	D(x): 0.694948 	D(G(z)): 0.283327 / 0.152247
+Epoch: 419 	Discriminator Loss: 0.000010 	Generator Loss: 0.000083 	D(x): 0.823914 	D(G(z)): 0.180114 / 0.051482
+Epoch: 420 	Discriminator Loss: 0.000005 	Generator Loss: 0.000077 	D(x): 0.897282 	D(G(z)): 0.108770 / 0.039704
+Epoch: 421 	Discriminator Loss: 0.000003 	Generator Loss: 0.000073 	D(x): 0.918901 	D(G(z)): 0.084277 / 0.042430
+Epoch: 422 	Discriminator Loss: 0.000003 	Generator Loss: 0.000074 	D(x): 0.924020 	D(G(z)): 0.073188 / 0.039862
+Epoch: 423 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.931428 	D(G(z)): 0.069225 / 0.044748
+Epoch: 424 	Discriminator Loss: 0.000003 	Generator Loss: 0.000071 	D(x): 0.935785 	D(G(z)): 0.067901 / 0.044487
+Epoch: 425 	Discriminator Loss: 0.000003 	Generator Loss: 0.000071 	D(x): 0.937586 	D(G(z)): 0.063483 / 0.042151
+Epoch: 426 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.936044 	D(G(z)): 0.058465 / 0.039741
+Epoch: 427 	Discriminator Loss: 0.000002 	Generator Loss: 0.000075 	D(x): 0.943119 	D(G(z)): 0.053173 / 0.037179
+Epoch: 428 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.945699 	D(G(z)): 0.056784 / 0.039873
+Epoch: 429 	Discriminator Loss: 0.000002 	Generator Loss: 0.000071 	D(x): 0.941625 	D(G(z)): 0.061303 / 0.043199
+Epoch: 430 	Discriminator Loss: 0.000003 	Generator Loss: 0.000072 	D(x): 0.939729 	D(G(z)): 0.064187 / 0.042004
+Epoch: 431 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.942151 	D(G(z)): 0.052221 / 0.039592
+Epoch: 432 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.945991 	D(G(z)): 0.049973 / 0.037160
+Epoch: 433 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.942826 	D(G(z)): 0.051367 / 0.040017
+Epoch: 434 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.949033 	D(G(z)): 0.057495 / 0.038083
+Epoch: 435 	Discriminator Loss: 0.000002 	Generator Loss: 0.000075 	D(x): 0.950627 	D(G(z)): 0.048681 / 0.035157
+Epoch: 436 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.949481 	D(G(z)): 0.049441 / 0.036510
+Epoch: 437 	Discriminator Loss: 0.000025 	Generator Loss: 0.000074 	D(x): 0.757564 	D(G(z)): 0.184504 / 0.206042
+Epoch: 438 	Discriminator Loss: 0.000023 	Generator Loss: 0.000050 	D(x): 0.675039 	D(G(z)): 0.365513 / 0.188260
+Epoch: 439 	Discriminator Loss: 0.000009 	Generator Loss: 0.000072 	D(x): 0.834866 	D(G(z)): 0.196676 / 0.057579
+Epoch: 440 	Discriminator Loss: 0.000005 	Generator Loss: 0.000077 	D(x): 0.895713 	D(G(z)): 0.110535 / 0.036218
+Epoch: 441 	Discriminator Loss: 0.000003 	Generator Loss: 0.000075 	D(x): 0.917334 	D(G(z)): 0.081818 / 0.037855
+Epoch: 442 	Discriminator Loss: 0.000003 	Generator Loss: 0.000074 	D(x): 0.930732 	D(G(z)): 0.067506 / 0.038858
+Epoch: 443 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.940220 	D(G(z)): 0.062698 / 0.034963
+Epoch: 444 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.940117 	D(G(z)): 0.064548 / 0.040040
+Epoch: 445 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.942139 	D(G(z)): 0.055901 / 0.037589
+Epoch: 446 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.945631 	D(G(z)): 0.051427 / 0.037740
+Epoch: 447 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.948734 	D(G(z)): 0.053550 / 0.035407
+Epoch: 448 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.951029 	D(G(z)): 0.047753 / 0.034734
+Epoch: 449 	Discriminator Loss: 0.000002 	Generator Loss: 0.000071 	D(x): 0.950481 	D(G(z)): 0.051866 / 0.037052
+Epoch: 450 	Discriminator Loss: 0.000002 	Generator Loss: 0.000071 	D(x): 0.950899 	D(G(z)): 0.048477 / 0.035134
+Epoch: 451 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.947879 	D(G(z)): 0.049901 / 0.037344
+Epoch: 452 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.952878 	D(G(z)): 0.044048 / 0.033109
+Epoch: 453 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.955690 	D(G(z)): 0.044479 / 0.031686
+Epoch: 454 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.954515 	D(G(z)): 0.044964 / 0.031819
+Epoch: 455 	Discriminator Loss: 0.000002 	Generator Loss: 0.000071 	D(x): 0.953352 	D(G(z)): 0.045474 / 0.034742
+Epoch: 456 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.957459 	D(G(z)): 0.045404 / 0.030151
+Epoch: 457 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.953289 	D(G(z)): 0.046958 / 0.035182
+Epoch: 458 	Discriminator Loss: 0.000002 	Generator Loss: 0.000075 	D(x): 0.953302 	D(G(z)): 0.046941 / 0.033354
+Epoch: 459 	Discriminator Loss: 0.000002 	Generator Loss: 0.000072 	D(x): 0.958011 	D(G(z)): 0.041305 / 0.031845
+Epoch: 460 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.956465 	D(G(z)): 0.040311 / 0.028815
+Epoch: 461 	Discriminator Loss: 0.000001 	Generator Loss: 0.000074 	D(x): 0.960779 	D(G(z)): 0.041395 / 0.030030
+Epoch: 462 	Discriminator Loss: 0.000002 	Generator Loss: 0.000074 	D(x): 0.959005 	D(G(z)): 0.042124 / 0.029633
+Epoch: 463 	Discriminator Loss: 0.000002 	Generator Loss: 0.000073 	D(x): 0.958407 	D(G(z)): 0.041081 / 0.031264
+Epoch: 464 	Discriminator Loss: 0.000002 	Generator Loss: 0.000075 	D(x): 0.956140 	D(G(z)): 0.051648 / 0.034331
+Epoch: 465 	Discriminator Loss: 0.000027 	Generator Loss: 0.000059 	D(x): 0.673336 	D(G(z)): 0.302758 / 0.241470
+Epoch: 466 	Discriminator Loss: 0.000010 	Generator Loss: 0.000084 	D(x): 0.826662 	D(G(z)): 0.194393 / 0.056077
+Epoch: 467 	Discriminator Loss: 0.000004 	Generator Loss: 0.000081 	D(x): 0.908889 	D(G(z)): 0.089342 / 0.027840
+Epoch: 468 	Discriminator Loss: 0.000002 	Generator Loss: 0.000077 	D(x): 0.945828 	D(G(z)): 0.051670 / 0.023818
+Epoch: 469 	Discriminator Loss: 0.000002 	Generator Loss: 0.000077 	D(x): 0.949517 	D(G(z)): 0.049761 / 0.025669
+Epoch: 470 	Discriminator Loss: 0.000002 	Generator Loss: 0.000076 	D(x): 0.953306 	D(G(z)): 0.047369 / 0.025424
+Epoch: 471 	Discriminator Loss: 0.000002 	Generator Loss: 0.000077 	D(x): 0.954678 	D(G(z)): 0.042253 / 0.025252
+Epoch: 472 	Discriminator Loss: 0.000001 	Generator Loss: 0.000076 	D(x): 0.960485 	D(G(z)): 0.041735 / 0.024698
+Epoch: 473 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.959053 	D(G(z)): 0.041661 / 0.025165
+Epoch: 474 	Discriminator Loss: 0.000001 	Generator Loss: 0.000077 	D(x): 0.960732 	D(G(z)): 0.036687 / 0.022899
+Epoch: 475 	Discriminator Loss: 0.000001 	Generator Loss: 0.000077 	D(x): 0.962634 	D(G(z)): 0.036088 / 0.022614
+Epoch: 476 	Discriminator Loss: 0.000001 	Generator Loss: 0.000076 	D(x): 0.961975 	D(G(z)): 0.039065 / 0.024698
+Epoch: 477 	Discriminator Loss: 0.000002 	Generator Loss: 0.000076 	D(x): 0.947193 	D(G(z)): 0.048924 / 0.030146
+Epoch: 478 	Discriminator Loss: 0.000001 	Generator Loss: 0.000077 	D(x): 0.963399 	D(G(z)): 0.039069 / 0.022670
+Epoch: 479 	Discriminator Loss: 0.000001 	Generator Loss: 0.000077 	D(x): 0.966911 	D(G(z)): 0.031067 / 0.021326
+Epoch: 480 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.965424 	D(G(z)): 0.037001 / 0.023124
+Epoch: 481 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.964868 	D(G(z)): 0.034011 / 0.023861
+Epoch: 482 	Discriminator Loss: 0.000001 	Generator Loss: 0.000074 	D(x): 0.965192 	D(G(z)): 0.033562 / 0.023602
+Epoch: 483 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.961491 	D(G(z)): 0.036541 / 0.025225
+Epoch: 484 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.967256 	D(G(z)): 0.033234 / 0.022704
+Epoch: 485 	Discriminator Loss: 0.000001 	Generator Loss: 0.000074 	D(x): 0.965318 	D(G(z)): 0.036046 / 0.024479
+Epoch: 486 	Discriminator Loss: 0.000001 	Generator Loss: 0.000074 	D(x): 0.965130 	D(G(z)): 0.035562 / 0.026421
+Epoch: 487 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.967252 	D(G(z)): 0.034323 / 0.024146
+Epoch: 488 	Discriminator Loss: 0.000001 	Generator Loss: 0.000074 	D(x): 0.961558 	D(G(z)): 0.033300 / 0.027314
+Epoch: 489 	Discriminator Loss: 0.000001 	Generator Loss: 0.000076 	D(x): 0.967622 	D(G(z)): 0.032086 / 0.021016
+Epoch: 490 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.966711 	D(G(z)): 0.030557 / 0.022465
+Epoch: 491 	Discriminator Loss: 0.000001 	Generator Loss: 0.000076 	D(x): 0.970398 	D(G(z)): 0.030960 / 0.021819
+Epoch: 492 	Discriminator Loss: 0.000001 	Generator Loss: 0.000076 	D(x): 0.967066 	D(G(z)): 0.031717 / 0.023380
+Epoch: 493 	Discriminator Loss: 0.000001 	Generator Loss: 0.000075 	D(x): 0.967944 	D(G(z)): 0.028734 / 0.022022
+Epoch: 494 	Discriminator Loss: 0.000001 	Generator Loss: 0.000076 	D(x): 0.971288 	D(G(z)): 0.028464 / 0.020307
+Epoch: 495 	Discriminator Loss: 0.000020 	Generator Loss: 0.000071 	D(x): 0.800119 	D(G(z)): 0.202007 / 0.196714
+Epoch: 496 	Discriminator Loss: 0.000011 	Generator Loss: 0.000069 	D(x): 0.793798 	D(G(z)): 0.203723 / 0.090474
+Epoch: 497 	Discriminator Loss: 0.000009 	Generator Loss: 0.000090 	D(x): 0.834874 	D(G(z)): 0.150639 / 0.059533
+Epoch: 498 	Discriminator Loss: 0.000005 	Generator Loss: 0.000090 	D(x): 0.904466 	D(G(z)): 0.123815 / 0.022257
+Epoch: 499 	Discriminator Loss: 0.000002 	Generator Loss: 0.000084 	D(x): 0.949393 	D(G(z)): 0.047630 / 0.015074
+Epoch: 500 	Discriminator Loss: 0.000002 	Generator Loss: 0.000079 	D(x): 0.954898 	D(G(z)): 0.044667 / 0.017041
+Finished Training
+Average data loading time:  6.247544666084461
+Average time spent in generator:  0.9608567518023774
+Average time spent in discriminator:  1.3131991612799465
+Time taken for 500 epochs:  4371.118907234166
