@@ -1,7 +1,7 @@
 # PokeGAN
 
 Generating New Pokemon Using Two-Stage Generative Adversarial Networks.
-
+![](https://github.com/parisimaa/PokGAN/blob/main/testanimation%20(1).gif)
 ---
 
 ### Contributors
