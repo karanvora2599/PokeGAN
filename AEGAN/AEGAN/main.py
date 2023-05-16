@@ -18,7 +18,7 @@ from aegan import AEGAN
 
 BATCH_SIZE = 32
 LATENT_DIM = 16
-EPOCHS = 20000
+EPOCHS = 500
 
 def save_images(GAN, vec, filename):
     images = GAN.generate_samples(vec)
