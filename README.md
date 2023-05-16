@@ -40,11 +40,12 @@ python3 main.py
 
 ### Output of GAN
 
+![](https://github.com/parisimaa/PokGAN/blob/main/testanimation%20(1).gif)
+
 ---
 
-### Output of AEGAN
+### Output of AEGAN Generator
 
-* **Generator**
+### Output of AEGAN Reconstructor
 
-  ![img](https://github.com/parisimaa/PokGAN/blob/main/AEGAN/results/AEGAN_Generator.gif)
-* **Reconstructed**
+---
