@@ -38,7 +38,7 @@ python3 main.py
 
 ---
 
-### Output of 
+### Output of GAN
 
 ---
 
