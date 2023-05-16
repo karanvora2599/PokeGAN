@@ -38,9 +38,7 @@ python3 main.py
 
 ---
 
-### Output of GAN
-
-![](https://github.com/parisimaa/PokGAN/blob/main/testanimation%20(1).gif)![](https://github.com/parisimaa/PokGAN/blob/main/testanimation%20(1).gif "PokeGAN")
+### Output of 
 
 ---
 
