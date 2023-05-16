@@ -46,10 +46,10 @@ python3 main.py
 
 ### Output of AEGAN Generator
 
-![](https://github.com/parisimaa/PokGAN/blob/main/AEGAN/results/AEGAN_Generator.gif)
+![](https://github.com/karanvora2599/PokeGAN/blob/main/AEGAN/results/AEGAN_Generator.gif)
 
 ### Output of AEGAN Reconstructor
 
-![](https://github.com/parisimaa/PokGAN/blob/main/AEGAN/results/AEGAN_Reconstructed.gif)
+![](https://github.com/karanvora2599/PokeGAN/blob/main/AEGAN/results/AEGAN_Reconstructed.gif)
 
 ---
