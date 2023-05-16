@@ -1,7 +1,13 @@
-<h1 align="center"><b>PokGAN</b> <br> Generating New Pokemon Using Two-Stage Generative Adversarial Networks
+
+
+<h1 align="center">
+  <img src="/home/karanvora/Documents/New York University/Classes/Semester 2/Deep Learning/Project/PokGAN/3839-eeveelutionplushies.gif" alt="PokGAN GIF" style="vertical-align: middle; width: 50px; height: 50px;"> PokGAN <br>
+  Generating New Pokemon Using Two-Stage Generative Adversarial Networks
 </h1>
-  <h4 align="center"><a href="https://github.com/parisimaa">Parisima Abdali (pa2297)</a> </h4> 
-  <h4 align="center"><a href="https://github.com/karanvora2599">Karan Vora (kv2154)</a> </h4>
+<h4 align="center"><a href="https://github.com/parisimaa">Parisima Abdali (pa2297)</a></h4>
+<h4 align="center"><a href="https://github.com/karanvora2599">Karan Vora (kv2154)</a></h4>
+
+
 
 ## Introduction
 
