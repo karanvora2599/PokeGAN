@@ -1,0 +1,18 @@
+memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%], utilization.memory [%], temperature.gpu, power.draw [W], power.limit [W], name, pci.bus_id, compute_mode, fan.speed [%], pstate, clocks.current.graphics [MHz], clocks.current.memory [MHz], uuid
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.52 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.69 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.47 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.31 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.43 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.65 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.70 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.46 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.42 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.86 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.64 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.60 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.51 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.56 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 14.20 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 0 MiB, 45556 MiB, 0 %, 0 %, 27, 13.65 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
+46080 MiB, 3 MiB, 45553 MiB, 0 %, 0 %, 27, 13.46 W, 250.00 W, Quadro RTX 8000, 00000000:86:00.0, Default, [N/A], P8, 300 MHz, 405 MHz, GPU-f669527b-a7ad-6b09-2aff-8e794e8ddc2f
